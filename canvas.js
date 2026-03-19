@@ -15,8 +15,8 @@ if (canvas) {
 
     // 1. Sine Wave Configuration
     const waves = [
-        { y: 0.25, amp: 45, freq: 0.008, speed: 0.96, color: WAVE_COLOR + ' 0.2)' },
-        { y: 0.27, amp: 25, freq: 0.015, speed: -0.64, color: WAVE_COLOR + ' 0.15)' },
+        { y: 0.25, amp: 85, freq: 0.008, speed: 0.96, color: WAVE_COLOR + ' 0.2)' },
+        { y: 0.27, amp: 40, freq: 0.015, speed: -0.64, color: WAVE_COLOR + ' 0.15)' },
         { y: 0.23, amp: 15, freq: 0.025, speed: 1.44, color: WAVE_COLOR + ' 0.1)' }
     ];
     let waveOffset = 0;
