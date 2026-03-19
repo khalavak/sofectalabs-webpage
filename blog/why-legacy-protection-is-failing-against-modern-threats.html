@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Legacy Protection Is Failing — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">EMAIL SECURITY</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY TERO VIRTAINLAHTI</span>
+                <span>JAN 19, 2026</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                Why Legacy Protection Is Failing Against Modern Threats
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                Why your current email protection is no longer good enough in the current AI driven email threat landscape.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-legacy-protection.jpg" alt="Legacy Protection Failing" class="post-hero-img">
+            
+            <h3>The uncomfortable truth IT leaders face in 2026</h3>
+            <p>
+                Here's a pattern we keep seeing: organizations with mature security programs, trained users, and established email gateways are still experiencing successful email-based attacks: compromised credentials, stolen data, and breaches that start with a single convincing message. Not because they neglected security, but because the attacks that land in inboxes today look nothing like the threats their tools were designed to stop.
+            </p>
+            <p>
+                The emails are perfectly written. There's no malware to detect. The links often point to legitimate services. And the traditional red flags that security awareness training taught users to spot simply aren't there anymore. The attack surface has fundamentally changed while many of our security tools haven't.
+            </p>
+
+            <h3>The Game Has Changed—And AI Accelerated it</h3>
+            <p>
+                Email remains the primary attack vector, but what arrives in your users' inboxes today barely resembles the spam and malware of few years ago. What's different now:
+            </p>
+            <ul>
+                <li><strong>Indistinguishable Correspondence:</strong> AI tools have eliminated telltale signs like broken language or awkward phrasing. Attackers can generate perfectly crafted emails in fluent Finnish, Swedish, or English in seconds, complete with context from your LinkedIn profiles.</li>
+                <li><strong>Identity Targeting:</strong> There's often no malicious attachment. Instead, attackers target your identities and business processes through phishing pages, OAuth tokens, or direct wire transfers.</li>
+                <li><strong>Rapid Infrastructure Rotation:</strong> Attackers use disposable domains and legitimate cloud services that might be dead before threat intelligence feeds even register them.</li>
+            </ul>
+
+            <h3>Why Your Current Stack is Struggling</h3>
+            <p>
+                Most organizations rely on native email security built into M365 or Google Workspace, supplemented with a traditional gateway. These platforms serve millions of mailboxes, meaning their rules must be conservative to avoid false positives. This creates three critical blind spots:
+            </p>
+            <ul>
+                <li><strong>Generic rules miss targeted attacks:</strong> Universal detection rules can't account for your specific organizational context or communication style.</li>
+                <li><strong>Post-delivery threats go undetected:</strong> Forwarding rules and internal attacks happen after delivery, where perimeter-based protections have no visibility.</li>
+                <li><strong>Manual intervention dependency:</strong> You're dependent on your platform provider's timeline to add detections for your unique threat landscape.</li>
+            </ul>
+
+            <blockquote>
+                "The shift required isn't just adding another tool—it's rethinking what email security should protect and how it should operate."
+            </blockquote>
+
+            <h3>What Modern Email Protection Must Do</h3>
+            <ul>
+                <li><strong>Understand identity and context:</strong> Know when an email claiming to be from your CFO actually originates from an unusual location.</li>
+                <li><strong>Detect behavioral anomalies:</strong> Visibility into account takeover indicators and unusual mailbox activity.</li>
+                <li><strong>Support rapid customization:</strong> The ability to create organization-specific detection logic quickly.</li>
+            </ul>
+
+            <p>
+                If you're evaluating your email security posture in 2026, the question isn't whether to upgrade—it's how quickly you can move to an architecture built for the threats that are actually hitting your inbox today.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>

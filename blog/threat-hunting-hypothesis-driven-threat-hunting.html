@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypothesis-Driven Threat Hunting — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">THREAT HUNTING</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY SOFECTA LABS TEAM</span>
+                <span>MAR 15, 2024</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                Threat Hunting – Hypothesis-Driven Threat Hunting
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                Proactively searching for hidden threats that bypass traditional security measures.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-hypothesis-hunting.png" alt="Hypothesis-Driven Hunting" class="post-hero-img">
+            
+            <p>
+                Threat hunting is a proactive cybersecurity approach where analysts actively search for hidden threats. Since predefined rules in SIEM systems may not always identify advanced attacks, hunting is used to uncover ongoing attacks that conventional alerting would miss.
+            </p>
+
+            <h3>The Investigation Model</h3>
+            <p>
+                At SofectaLabs, we employ a hypothesis-driven model to systematically uncover advanced threats. This method is often applied when new TTPs (Tactics, Techniques, and Procedures) are identified through threat intelligence.
+            </p>
+
+            <h4>Three Key Types of Analysis:</h4>
+            <ul>
+                <li><strong>Analytics-driven:</strong> Uses AI and UEBA to formulate hypotheses based on risk scores.</li>
+                <li><strong>Intelligence-driven:</strong> Predicts attack methods via malware analysis and vulnerability scans.</li>
+                <li><strong>Situational-awareness driven:</strong> Focuses on crown jewel analysis and enterprise risk assessments.</li>
+            </ul>
+
+            <h3>Our Threat Hunting Process</h3>
+            <ol>
+                <li><strong>Develop Hypothesis:</strong> Based on available log data (endpoint, network, etc.).</li>
+                <li><strong>Gather Data:</strong> Query ElasticSearch for firewall logs, endpoint telemetry, and malicious signals.</li>
+                <li><strong>Validation:</strong> If traces of communication (e.g., Gh0st RAT) are found, confirm the threat.</li>
+                <li><strong>Mapping:</strong> Leverage MITRE ATT&CK to correlate detected activity with known techniques.</li>
+            </ol>
+
+            <blockquote>
+                "Threat hunting is not just about technology—it’s about curiosity, analysis, and problem-solving."
+            </blockquote>
+
+            <h3>From Hypothesis to Action</h3>
+            <p>
+                Once a threat is confirmed, we follow incident response procedures to contain and mitigate it. Lessons learned are then used to refine detection rules and improve security policies. Documentation of all findings ensures continuous evolution of our customers' defenses.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in the SOC — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">AI/ML</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY VLADISLAV MAROCHKIN</span>
+                <span>FEB 5, 2025</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                Elevating Security Operations: The Transformative Power of AI in the SOC
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                How Sofecta Labs leverages Artificial Intelligence to enhance decision-making and accelerate response in modern Security Operations Centers.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-ai-soc.jpg" alt="AI in the SOC" class="post-hero-img">
+            
+            <h2>The Challenge of Scale</h2>
+            <p>
+                In today’s cybersecurity landscape, the volume and complexity of data being generated are overwhelming for traditional Security Operations Centers (SOCs). At Sofecta Labs, we use AI to address this challenge of scale and enhance the capabilities of our security analysts.
+            </p>
+
+            <h2>AI-Powered Decision Support</h2>
+            <p>
+                AI provides our analysts with a powerful decision support system. By automatically identifying patterns and anomalies in large datasets, AI can flag potential threats that might otherwise go unnoticed. This allows our analysts to focus their attention on the most critical issues.
+            </p>
+
+            <h2>Accelerated Response</h2>
+            <p>
+                In a cyberattack, every second counts. AI helps us accelerate our response by automating a variety of routine tasks, such as initial alert triage and data gathering. This frees up our analysts to focus on complex decision-making and high-priority investigations.
+            </p>
+
+            <blockquote>
+                "AI is a force multiplier for our security analysts, allowing them to work faster and more effectively than ever before."
+            </blockquote>
+
+            <h2>Continuous Learning</h2>
+            <p>
+                Our AI systems are constantly learning and evolving. By analyzing new threats and response outcomes, they can refine their detection rules and improve their overall effectiveness over time. This continuous learning process ensures that our security posture remains robust and resilient.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>

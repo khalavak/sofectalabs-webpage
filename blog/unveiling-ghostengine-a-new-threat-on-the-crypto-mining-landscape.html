@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unveiling GHOSTENGINE — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">MDR</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY SOFECTA LABS TEAM</span>
+                <span>MAY 27, 2024</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                Unveiling GHOSTENGINE: A New Threat on the Crypto Mining Landscape
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                How stealthy miners use BYOVD to disable EDR tools and carry out operations undetected.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-ghostengine.png" alt="GHOSTENGINE Threat" class="post-hero-img">
+            
+            <p>
+                In an ever-evolving cybersecurity landscape, GHOSTENGINE emerges as a new player, employing both cunning and aggressive methods. This intrusion set utilizes multiple malicious modules and exploits vulnerable drivers to disable known security solutions, like Endpoint Detection and Response (EDR) tools, facilitating its crypto mining operations.
+            </p>
+
+            <h3>The Infection Flow</h3>
+            <p>
+                GHOSTENGINE's sophisticated operation begins with an innocuous PowerShell script. It proceeds to elevate its privileges, gaining unrestricted access to the system. Upon gaining control, it deploys known vulnerable drivers to disable installed EDR solutions, making it harder for security teams to detect its presence.
+            </p>
+            <p>
+                The Elastic Security Labs team has meticulously dissected GHOSTENGINE’s operations, from its initial infection and establishment of persistence to the installation of a previously undocumented backdoor and execution of a crypto-miner (like <code>Tiworker.exe</code>).
+            </p>
+
+            <h3>Elastic Endpoints: Tamper-Proof Protection</h3>
+            <p>
+                Our Elastic XDR solution provides an <a href="https://www.elastic.co/guide/en/security/current/agent-tamper-protection.html">"agent tamper protection"</a> mechanism. This ensures that EDR solutions are not tampered with, disabled, or uninstalled without notification. This is crucial as GHOSTENGINE specifically targets the availability of defensive tools.
+            </p>
+
+            <h3>Hunting for GHOSTENGINE</h3>
+            <p>
+                Using Elasticsearch advanced query languages (ES|QL), our MDR team can effectively hunt for bad indicators across customer environments in minutes.
+            </p>
+
+            <h4>ES|QL Query:</h4>
+            <pre><code>FROM *:logs-* 
+| WHERE process.hash.sha256 IN ( 
+    "2fe78941d74d35f721556697491a438bf3573094d7ac091b42e4f59ecbd25753", 
+    "4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1", 
+    "2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae" 
+) OR dns.question.name IN ("download.yrnvtklot.com", "ftp.yrnvtklot.com")
+| LIMIT 10</code></pre>
+
+            <h3>Conclusion</h3>
+            <p>
+                While GHOSTENGINE’s operations may seem daunting, Sofecta Labs’ MDR services and Elastic Endpoints’ tamper-proof mechanism provide critical defense. We stay committed to providing the best tools and support to protect your systems as threat actors continue to evolve.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>

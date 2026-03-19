@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protecting Microsoft 365 — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">SECURITY</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY SOFECTA LABS TEAM</span>
+                <span>APR 16, 2024</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                Protecting Your Microsoft 365: Strategies Against On-Premises Threats
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                Shedding light on vulnerabilities associated with hybrid deployments and hybrid identity.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-m365-protection.png" alt="M365 Protection" class="post-hero-img">
+            
+            <p>
+                In today's digital landscape, protecting your organization's Microsoft 365 environment is paramount. Microsoft 365 serves as the backbone of collaboration, but the interconnected nature of on-premises and cloud systems poses unique security challenges.
+            </p>
+
+            <h3>The Hybrid Threat Landscape</h3>
+            <p>
+                Hybrid deployments introduce potential vulnerabilities, primarily through federation trust relationships and account synchronization. Compromised token-signing certificates or unauthorized modifications of privileged users can grant attackers administrative access to your cloud environment.
+            </p>
+
+            <h3>Key Security Recommendations</h3>
+            <ol>
+                <li><strong>Isolating Administrator Accounts:</strong> Master admin accounts in Entra ID, use MFA, and access them only via managed workstations.</li>
+                <li><strong>Managing Devices from the Cloud:</strong> Utilize Microsoft Entra join to eliminate dependencies on on-premises infrastructure.</li>
+                <li><strong>Limiting On-Premises Privileges:</strong> Ensure synchronized objects hold no special privileges in the cloud.</li>
+                <li><strong>Implementing Cloud Authentication:</strong> Deploy passwordless and MFA methods to strengthen credential security.</li>
+            </ol>
+
+            <blockquote>
+                "Securing Microsoft 365 requires a comprehensive approach that addresses the legacy dependencies of on-premises environments."
+            </blockquote>
+
+            <h3>Monitoring and Logging</h3>
+            <p>
+                Proactive monitoring is essential. Organizations should track suspicious activity, UEBA alerts, and changes to tenant-wide configurations using Entra logs and Azure Monitor. A robust log retention strategy ensures that critical events are analyzed in time.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                Securing your Microsoft 365 environment is an ongoing effort. By embracing a proactive security mindset and implementing cloud-first identity strategies, organizations can significantly reduce the risk of on-premises compromises impacting their cloud operations.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofecta Labs — Managed Detection & Response</title>
+    <meta name="description" content="Sofecta Labs provides managed Elastic SIEM/XDR and Sublime Email Security for teams that require absolute visibility.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="assets/logo-horizontal.png" alt="SOFECTA LABS">
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#engine">THE ENGINE</a></li>
+                    <li><a href="#protocol">PROTOCOL</a></li>
+                    <li><a href="#lab">CONSULTING</a></li>
+                    <li><a href="#initiate">INITIATE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                </ul>
+                <a href="#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1 class="camera-font" style="text-transform: none;">
+                <span style="color: #fff;">Detection is a <span class="accent-text" style="color: #fff;">Science</span>.</span><br>
+                <span style="color: hsl(var(--accent-orange));">Response is an <span class="accent-text" style="color: hsl(var(--accent-orange));">Art</span>.</span>
+            </h1>
+            <p class="text-muted" style="max-width: 650px; margin-top: 1rem; font-size: 1.125rem;">Sofecta Labs provides managed Elastic SIEM/XDR and Sublime Email Security for teams that require absolute visibility.</p>
+            <div class="hero-btns">
+                <a href="#initiate" class="btn-sofecta">REQUEST LAB ACCESS →</a>
+                <a href="#engine" class="btn-sofecta secondary">VIEW THE STACK</a>
+            </div>
+        </section>
+
+        <section class="metrics-bar">
+            <div class="container" style="display: flex; width: 100%; justify-content: space-around; flex-wrap: wrap; gap: 3rem;">
+                <div class="metric-item">
+                    <div class="metric-value">&lt; 4.2 min</div>
+                    <div class="metric-label">Time to Detect</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">2.4M+</div>
+                    <div class="metric-label">Signals / Day</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">99.98%</div>
+                    <div class="metric-label">Uptime</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- // CUSTOMER LOGOS -->
+        <section class="logo-carousel">
+            <div class="logo-track">
+                <!-- Set 1 -->
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d15ce60232dc5ba8419_BE_LOGO.png" alt="BE Group"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d3db80355ee69327a34_algol-white.png" alt="Algol"></div>
+                <div class="logo-slide"><img src="https://www.borenius.com/images/svg/logo-borenius-white.svg" alt="Borenius"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d68a834e75376b5e3e1_mipro_logo.png" alt="Mipro"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152ded89d3b20f5bfba644_logo_mediconsult.webp" alt="Mediconsult"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152e5408a370284c306ed7_omsen_pos_opt2x.png" alt="Omsen Försäkringar"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152f5d9e3b40ee72f1652e_granlund.svg" alt="Granlund"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/6615323ed3448754fa671552_mariehamns.png" alt="Mariehamns Energi"></div>
+                
+                <!-- Set 2 (Duplicate) -->
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d15ce60232dc5ba8419_BE_LOGO.png" alt="BE Group"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d3db80355ee69327a34_algol-white.png" alt="Algol"></div>
+                <div class="logo-slide"><img src="https://www.borenius.com/images/svg/logo-borenius-white.svg" alt="Borenius"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152d68a834e75376b5e3e1_mipro_logo.png" alt="Mipro"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152ded89d3b20f5bfba644_logo_mediconsult.webp" alt="Mediconsult"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152e5408a370284c306ed7_omsen_pos_opt2x.png" alt="Omsen Försäkringar"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/66152f5d9e3b40ee72f1652e_granlund.svg" alt="Granlund"></div>
+                <div class="logo-slide"><img src="https://cdn.prod.website-files.com/65c2aa28f71f67763922a2eb/6615323ed3448754fa671552_mariehamns.png" alt="Mariehamns Energi"></div>
+            </div>
+        </section>
+
+        <section id="engine" class="container section-padding">
+            <span class="section-tag">// THE ENGINE</span>
+            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">The Stack</h2>
+            <p class="text-muted" style="max-width: 600px; margin-bottom: 4rem;">Three integrated modules. Zero blind spots. Every signal ingested, correlated, and acted upon.</p>
+            
+            <div class="card-grid">
+                <!-- THE BRAIN -->
+                <div class="module-card">
+                    <span class="section-tag">THE BRAIN</span>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Public Sans', sans-serif;">Elastic SIEM</h4>
+                    <p class="text-muted" style="font-size: 0.875rem;">Centralized log aggregation and real-time threat detection across your entire infrastructure. Protocol-agnostic ingestion with custom detection rules.</p>
+                    <ul class="module-list">
+                        <li>Custom Detection Rules</li>
+                        <li>Real-time Correlation</li>
+                        <li>Threat Intelligence Feeds</li>
+                    </ul>
+                </div>
+                <!-- THE PERIMETER -->
+                <div class="module-card">
+                    <span class="section-tag">THE PERIMETER</span>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Public Sans', sans-serif;">Sublime Security</h4>
+                    <p class="text-muted" style="font-size: 0.875rem;">AI-powered email security that stops phishing, BEC, and social engineering attacks before they reach your inbox.</p>
+                    <ul class="module-list">
+                        <li>BEC Protection</li>
+                        <li>Phishing Detection</li>
+                        <li>Supply Chain Defense</li>
+                    </ul>
+                </div>
+                <!-- THE PULSE -->
+                <div class="module-card">
+                    <span class="section-tag">THE PULSE</span>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Public Sans', sans-serif;">Extended Detection</h4>
+                    <p class="text-muted" style="font-size: 0.875rem;">Unified visibility across endpoints, networks, and cloud workloads. Automated response playbooks reduce response times.</p>
+                    <ul class="module-list">
+                        <li>Endpoint Telemetry</li>
+                        <li>Automated Response</li>
+                        <li>Cloud Workload Protection</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="protocol" class="container section-padding">
+            <span class="section-tag">// PROTOCOL</span>
+            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">How We Work</h2>
+            <p class="text-muted" style="max-width: 600px; margin-bottom: 5rem;">A repeatable, transparent process. No black boxes.</p>
+            
+            <div class="methodology-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-num">01</div>
+                    <div class="timeline-content">
+                        <h3>INGEST</h3>
+                        <p class="text-muted">Protocol-agnostic data collection from endpoints, networks, cloud, and email.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">02</div>
+                    <div class="timeline-content">
+                        <h3>ANALYZE</h3>
+                        <p class="text-muted">AI-assisted correlation with custom detection logic tuned to your threat landscape.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">03</div>
+                    <div class="timeline-content">
+                        <h3>REMEDIATE</h3>
+                        <p class="text-muted">Automated containment and manual response within minutes, not hours.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-num">04</div>
+                    <div class="timeline-content">
+                        <h3>CONSULT</h3>
+                        <p class="text-muted">Post-incident analysis, hardening recommendations, and continuous tuning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lab" class="container section-padding">
+            <span class="section-tag">// CONSULTING</span>
+            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">Capabilities</h2>
+            <p class="text-muted" style="max-width: 600px; margin-bottom: 4rem;">Beyond detection. Sofecta Labs helps you build, test, and harden your entire security posture.</p>
+            
+            <div class="card-grid">
+                <div class="module-card">
+                    <div class="module-tag">THE COMPASS</div>
+                    <h3>Virtual CISO (vCISO)</h3>
+                    <p class="text-muted">Strategic security leadership on demand to guide your roadmap and risk posture.</p>
+                    <ul class="module-list">
+                        <li>Executive Risk Reporting</li>
+                        <li>Policy Development</li>
+                        <li>Budget & Roadmap Planning</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-tag">THE GAUNTLET</div>
+                    <h3>Penetration Testing</h3>
+                    <p class="text-muted">Deep-dive adversary simulation across network, web, and cloud environments.</p>
+                    <ul class="module-list">
+                        <li>External/Internal Testing</li>
+                        <li>Web Application Security</li>
+                        <li>Post-Exploitation Analysis</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-tag">THE ANCHOR</div>
+                    <h3>Compliance & Audit</h3>
+                    <p class="text-muted">Streamlined readiness for global frameworks to build trust with your customers.</p>
+                    <ul class="module-list">
+                        <li>ISO 27001</li>
+                        <li>NIS2, DORA, GDPR</li>
+                        <li>Gap Analysis & Remediation</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-tag">THE SHIELD</div>
+                    <h3>Incident Response</h3>
+                    <p class="text-muted">Rapid, 24/7 breach containment and forensic analysis to minimize downtime.</p>
+                    <ul class="module-list">
+                        <li>Emergency Incident Handling</li>
+                        <li>Digital Forensics</li>
+                        <li>Post-Incident Recovery</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-tag">THE ARCHITECT</div>
+                    <h3>Security Architecture</h3>
+                    <p class="text-muted">Modern Zero Trust blueprints and cloud-native security design for scale.</p>
+                    <ul class="module-list">
+                        <li>Zero Trust Implementation</li>
+                        <li>Cloud Security Hardening</li>
+                        <li>Infrastructure-as-Code Audits</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-tag">THE HUMAN</div>
+                    <h3>Security Awareness</h3>
+                    <p class="text-muted">Interactive phishing simulations and training to turn employees into your first line of defense.</p>
+                    <ul class="module-list">
+                        <li>Custom Phishing Labs</li>
+                        <li>Role-Based Training</li>
+                        <li>Security Culture Metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="initiate" class="container section-padding">
+            <span class="section-tag">// INITIATE</span>
+            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">Request Analysis</h2>
+            <p class="text-muted" style="max-width: 600px; margin-bottom: 4rem;">Tell us about your environment. We'll respond with a tailored detection strategy within 24 hours.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;">
+                <div class="text-muted" style="font-size: 0.875rem;">
+                    <ul class="module-list">
+                        <li>No commitment required</li>
+                        <li>Response within 24 hours</li>
+                        <li>Custom threat assessment included</li>
+                    </ul>
+                </div>
+                
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <form id="requestAnalysisForm">
+                        <div class="terminal-line">
+                            <span class="prompt">$ initiate --request-analysis</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">NAME:</span>
+                            <input type="text" id="reqName" class="terminal-input" placeholder="Enter name..." required>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">EMAIL:</span>
+                            <input type="email" id="reqEmail" class="terminal-input" placeholder="Enter email..." required>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">ORG:</span>
+                            <input type="text" id="reqOrg" class="terminal-input" placeholder="Organization name..." required>
+                        </div>
+                        <div class="terminal-line" style="display: block;">
+                            <span class="prompt">MESSAGE:</span>
+                            <textarea id="reqMessage" class="terminal-textarea" placeholder="Describe your environment and security needs..." required></textarea>
+                        </div>
+                        <button type="submit" id="reqSubmitBtn" class="transmit-btn">TRANSMIT →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass));">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="canvas.js"></script>
+    <script>
+        // Webhook Integration
+        document.getElementById('requestAnalysisForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('reqSubmitBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'TRANSMITTING...';
+            btn.disabled = true;
+
+            const payload = {
+                name: document.getElementById('reqName').value,
+                email: document.getElementById('reqEmail').value,
+                organization: document.getElementById('reqOrg').value,
+                message: document.getElementById('reqMessage').value
+            };
+
+            try {
+                await fetch('https://sofectalabs.tines.com/webhook/website-analysis-request/3e1e3e80ad25d65088da47cebb749e7e', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'text/plain',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                // With no-cors, the response is opaque and response.ok is false, 
+                // but if fetch didn't throw a network error, the transmission succeeded.
+                btn.innerHTML = 'TRANSMISSION SUCCESSFUL';
+                btn.style.color = '#27c93f';
+                btn.style.borderColor = '#27c93f';
+                document.getElementById('requestAnalysisForm').reset();
+            } catch (error) {
+                console.error('Error:', error);
+                btn.innerHTML = 'TRANSMISSION FAILED';
+                btn.style.color = '#ff5f56';
+                btn.style.borderColor = '#ff5f56';
+            } finally {
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Sofecta Labs</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#engine">THE ENGINE</a></li>
+                    <li><a href="index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="index.html#lab">CONSULTING</a></li>
+                    <li><a href="index.html#initiate">INITIATE</a></li>
+                    <li><a href="blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="blog-hero" style="text-align: left; padding: 10rem 0 4rem;">
+            <span class="section-tag">// BLOG</span>
+            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none;">Insights & <span class="text-accent" style="color: hsl(var(--accent-orange));">Signals</span></h1>
+            <p class="text-muted" style="margin-top: 1rem; text-align: left; max-width: 800px;">From the frontlines of Managed Detection and Response: Relevant insights and actionable research on log analysis, threat intelligence, threat hunting, email security, and the evolving threat landscape. Real-world expertise, decoded.</p>
+        </section>
+
+        <div class="blog-controls">
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="gridView">GRID</button>
+                <button class="toggle-btn" id="listView">LIST</button>
+            </div>
+            <div class="text-muted" style="font-family: 'Geist Mono', monospace; font-size: 0.7rem;">30 POSTS PUBLISHED</div>
+        </div>
+
+        <section class="blog-grid" id="blogContainer">
+            <article class="blog-card" onclick="window.location.href='blog/solving-email-security-for-modern-threats.html'" style="cursor: pointer;">
+                <img src="assets/blog-solving-email-security.jpg" alt="Email Security">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>JAN 21, 2026</span>
+                    </div>
+                    <h3>Solving Email Security For Modern Threats</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Managed email protection for Microsoft 365 and Google Workspace. API-driven detection with 24/7 expert monitoring.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/why-legacy-protection-is-failing-against-modern-threats.html'" style="cursor: pointer;">
+                <img src="assets/blog-legacy-protection.jpg" alt="Email Security">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">EMAIL SECURITY</span>
+                        <span>JAN 19, 2026</span>
+                    </div>
+                    <h3>Why Legacy Protection Is Failing</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why traditional email gateways are failing in 2026 and the gap between universal platform protections and targeted attacks.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/from-insight-to-action-accelerating-threat-hunting-with-ai-agents.html'" style="cursor: pointer;">
+                <img src="assets/blog-ai-agents.jpg" alt="Threat Hunting">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI/ML</span>
+                        <span>JAN 15, 2026</span>
+                    </div>
+                    <h3>From Insight to Action: Accelerating Threat Hunting with AI Agents</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">How Sofecta Labs combines automated intelligence with agentic AI to hunt threats before they strike.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/maximize-your-microsoft-defender-investment-with-sofecta-labs-mdr.html'" style="cursor: pointer;">
+                <img src="assets/blog-defender-vs-elastic.webp" alt="Microsoft Defender vs Elastic">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">CYBERSECURITY</span>
+                        <span>JUN 16, 2025</span>
+                    </div>
+                    <h3>Microsoft Defender vs Elastic XDR & MDR</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Comparing MDE with Elastic XDR and Sofecta Labs MDR to help organizations choose the best protection.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/elastic-xdr-shines-in-latest-av-comparatives-business-security-test.html'" style="cursor: pointer;">
+                <img src="assets/blog-elastic-xdr-test.png" alt="Elastic XDR Test">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">EDR</span>
+                        <span>JUN 10, 2025</span>
+                    </div>
+                    <h3>Elastic XDR Shines in AV-Comparatives Test</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Elastic Security achieved a 100% malware protection rate in the latest independent test.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/protect-your-business-understanding-and-combating-data-exfiltration-threats.html'" style="cursor: pointer;">
+                <img src="assets/blog-data-exfiltration.jpg" alt="Data Exfiltration">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY ADVISORY</span>
+                        <span>MAY 30, 2025</span>
+                    </div>
+                    <h3>Understanding Data Exfiltration</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Protecting your business from unauthorized data transfers and costly cyber threats.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/threat-hunting---hunting-for-konni-rat-with-elastic.html'" style="cursor: pointer;">
+                <img src="assets/blog-konni-rat.png" alt="Konni RAT">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">THREAT HUNTING</span>
+                        <span>MAY 16, 2025</span>
+                    </div>
+                    <h3>Hunting for Konni RAT with Elastic</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">In-depth analysis of Konni RAT and how to detect it using Elastic's security features.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/spot-anomalies-early-to-secure-your-future.html'" style="cursor: pointer;">
+                <img src="assets/blog-anomaly-detection.png" alt="Anomaly Detection">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI/ML</span>
+                        <span>MAY 12, 2025</span>
+                    </div>
+                    <h3>Spot Anomalies Early to Secure Your Future</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Using Machine Learning to identify "unknown unknowns" in cybersecurity.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/isms-turns-cybersecurity-into-a-business-advantage.html'" style="cursor: pointer;">
+                <img src="assets/blog-isms-advantage.jpeg" alt="ISMS Advantage">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>APR 29, 2025</span>
+                    </div>
+                    <h3>ISMS turns Cybersecurity into Advantage</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why centralized ISMS are becoming essential for growth and compliance.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/security-compliance-as-a-competitive-edge.html'" style="cursor: pointer;">
+                <img src="assets/blog-compliance-edge.jpg" alt="Compliance Edge">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY ADVISORY</span>
+                        <span>APR 20, 2025</span>
+                    </div>
+                    <h3>Security Compliance as a Competitive Edge</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">How businesses can turn NIS2 and DORA into strategic advantages and trust.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/bypass-amsi-protecting-your-organization-from-advanced-memory-threats.html'" style="cursor: pointer;">
+                <img src="assets/blog-amsi-bypass.png" alt="AMSI Bypass">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY ADVISORY</span>
+                        <span>APR 4, 2025</span>
+                    </div>
+                    <h3>Bypass AMSI: Advanced Memory Threats</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Understanding how attackers bypass AMSI and how to defend against in-memory malware.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/the-ai-revolution-how-llms-redefine-detection-and-response.html'" style="cursor: pointer;">
+                <img src="assets/blog-ai-revolution.jpeg" alt="AI Revolution">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI/ML</span>
+                        <span>MAR 10, 2025</span>
+                    </div>
+                    <h3>The AI Revolution: LLMs in SecOps</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">How LLMs are redefining the way we detect and respond to cyber threats.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/the-illusion-of-automation-why-ai-still-needs-human-expertise.html'" style="cursor: pointer;">
+                <img src="assets/blog-automation-illusion.png" alt="Automation Illusion">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI/ML</span>
+                        <span>MAR 3, 2025</span>
+                    </div>
+                    <h3>The Illusion of Automation</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why purely automated security solutions often fail and the role of human expertise.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/open-source-ai-threat-intelligence-tool-by-sofecta-labs.html'" style="cursor: pointer;">
+                <img src="assets/blog-ai-intel-tool.png" alt="AI Threat Intel Tool">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">TOOLS</span>
+                        <span>FEB 20, 2025</span>
+                    </div>
+                    <h3>Open Source AI Threat Intelligence Tool</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Automated threat intel gathering and LLM-powered summarization tool for the community.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/finding-the-hidden-the-power-of-hypothesis-driven-threat-hunting.html'" style="cursor: pointer;">
+                <img src="assets/blog-hypothesis-hunting.jpeg" alt="Hypothesis-Driven Hunting">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">THREAT HUNTING</span>
+                        <span>FEB 12, 2025</span>
+                    </div>
+                    <h3>Power of Hypothesis-Driven Hunting</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why searching for adversarial behaviors is more effective than waiting for alerts.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/elevating-security-operations-the-transformative-power-of-ai-in-the-soc.html'" style="cursor: pointer;">
+                <img src="assets/blog-ai-soc.jpg" alt="AI in the SOC">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">AI/ML</span>
+                        <span>FEB 5, 2025</span>
+                    </div>
+                    <h3>AI in the SOC: Transformative Power</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">How AI enhances decision-making and accelerates response in modern SOCs.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/industrial-cybersecurity-avoiding-common-security-mistakes-in-the-manufacturing-sector.html'" style="cursor: pointer;">
+                <img src="assets/blog-manufacturing-mistakes.jpg" alt="Manufacturing Security">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>JAN 29, 2025</span>
+                    </div>
+                    <h3>Industrial Cybersecurity Mistakes</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Identifying and analyzing frequent security and IT operational errors in manufacturing.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/sofecta-labs-at-disobey-2025-a-weekend-of-hacking-learning-and-community.html'" style="cursor: pointer;">
+                <img src="assets/blog-disobey-2025.jpg" alt="Disobey 2025">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">COMMUNITY</span>
+                        <span>JAN 14, 2025</span>
+                    </div>
+                    <h3>Sofecta Labs at Disobey 2025</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Recapping our experience at the biggest hacker convention in the Nordics.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/the-balancing-act-modern-it-operations-vs-the-cybersecurity-reality.html'" style="cursor: pointer;">
+                <img src="assets/blog-it-ops-balance.jpg" alt="IT Ops Balance">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>JAN 10, 2025</span>
+                    </div>
+                    <h3>IT Ops vs. Cybersecurity Reality</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why the conflict between IT efficiency and security is a critical challenge.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/security-advisory-critical-remote-code-execution-vulnerability-in-microsoft-outlook.html'" style="cursor: pointer;">
+                <img src="assets/blog-outlook-rce.jpg" alt="Outlook RCE Advisory">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY ADVISORY</span>
+                        <span>JUN 19, 2024</span>
+                    </div>
+                    <h3>Outlook RCE: Patch Immediately</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Critical security update for CVE-2024-30103. No user interaction required.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/the-rising-trend-of-email-attacks-and-the-importance-of-effective-mdr-services.html'" style="cursor: pointer;">
+                <img src="assets/blog-email-attacks.jpeg" alt="Email Attacks">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">EMAIL SECURITY</span>
+                        <span>JUN 3, 2024</span>
+                    </div>
+                    <h3>Rising Trend of Email Attacks</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Analyzing the shift towards sophisticated phishing and why MDR is vital.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/unveiling-ghostengine-a-new-threat-on-the-crypto-mining-landscape.html'" style="cursor: pointer;">
+                <img src="assets/blog-ghostengine.png" alt="GHOSTENGINE">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">MDR</span>
+                        <span>MAY 27, 2024</span>
+                    </div>
+                    <h3>Unveiling GHOSTENGINE</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Analysis of a sophisticated threat actor using BYOVD to disable security tools.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/introducing-sofecta-labs-threatctrl-revolutionizing-cybersecurity-management-for-unparalleled-visibility-and-control.html'" style="cursor: pointer;">
+                <img src="assets/blog-threatctrl.jpg" alt="ThreatCTRL">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">THREATCTRL</span>
+                        <span>APR 16, 2024</span>
+                    </div>
+                    <h3>Introducing ThreatCTRL</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Unveiling our platform for unparalleled visibility and control over security posture.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/protecting-your-microsoft-365-strategies-against-on-premises-threats.html'" style="cursor: pointer;">
+                <img src="assets/blog-m365-protection.png" alt="M365 Protection">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>APR 16, 2024</span>
+                    </div>
+                    <h3>Protecting Your Microsoft 365</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Strategies against on-premises vulnerabilities in hybrid cloud environments.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/navigating-nis2-and-dora-shaping-the-future-of-cybersecurity-across-sectors-in-europe.html'" style="cursor: pointer;">
+                <img src="assets/blog-nis2-dora.jpeg" alt="NIS2 and DORA">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">COMPLIANCE</span>
+                        <span>APR 10, 2024</span>
+                    </div>
+                    <h3>Navigating NIS2 and DORA</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Redefining cybersecurity standards across sectors in the European Union.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/creating-the-ideal-mdr-partnership-with-sofecta-labs.html'" style="cursor: pointer;">
+                <img src="assets/blog-mdr-partnership.webp" alt="MDR Partnership">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>APR 2, 2024</span>
+                    </div>
+                    <h3>The Ideal MDR Partnership</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Guided questions for selecting the right Managed Detection and Response provider.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/security-posture-management-a-key-to-organizational-security.html'" style="cursor: pointer;">
+                <img src="assets/blog-security-posture.jpg" alt="Security Posture Management">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">THREATCTRL</span>
+                        <span>APR 1, 2024</span>
+                    </div>
+                    <h3>Posture Management Essentials</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Why continuous evaluation and response can significantly reduce organizational risk.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/streamlining-soc-workflows-with-sofecta-labs-mdr-and-tines-automation.html'" style="cursor: pointer;">
+                <img src="assets/blog-soc-automation.webp" alt="SOC Automation">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">PRODUCT</span>
+                        <span>FEB 13, 2024</span>
+                    </div>
+                    <h3>Streamlining SOC Workflows</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">How Tines automation enhances alert enrichment and accelerates response speed.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/introducing-elastic-security-8-12-2-a-new-era-of-ai-driven-insights-and-enhanced-cloud-security.html'" style="cursor: pointer;">
+                <img src="assets/blog-elastic-8-12.webp" alt="Elastic Security 8.12.2">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">PRODUCT</span>
+                        <span>JAN 17, 2024</span>
+                    </div>
+                    <h3>Introducing Elastic Security 8.12.2</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">A new era of AI-driven insights and enhanced cloud security for modern SOCs.</p>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="window.location.href='blog/unleash-superior-security-combining-threat-hunting-with-mdr.html'" style="cursor: pointer;">
+                <img src="assets/blog-hunt-mdr.jpg" alt="Threat Hunting + MDR">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">SECURITY</span>
+                        <span>JAN 4, 2024</span>
+                    </div>
+                    <h3>Unleash Superior Security</h3>
+                    <p class="text-muted" style="font-size: 0.875rem;">Combining methodical threat hunting with continuous MDR monitoring for superior defense.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="canvas.js"></script>
+    <script>
+        // View Toggler
+        const gridBtn = document.getElementById('gridView');
+        const listBtn = document.getElementById('listView');
+        const container = document.getElementById('blogContainer');
+
+        gridBtn.addEventListener('click', () => {
+            gridBtn.classList.add('active');
+            listBtn.classList.remove('active');
+            container.classList.remove('list-view');
+        });
+
+        listBtn.addEventListener('click', () => {
+            listBtn.classList.add('active');
+            gridBtn.classList.remove('active');
+            container.classList.add('list-view');
+        });
+    </script>
+</body>
+</html>

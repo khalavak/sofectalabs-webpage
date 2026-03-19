@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accelerating Threat Hunting with AI Agents — Sofecta Labs</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#engine">THE ENGINE</a></li>
+                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#lab">CONSULTING</a></li>
+                    <li><a href="../index.html#initiate">INITIATE</a></li>
+                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                </ul>
+                <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-header">
+            <div class="blog-meta" style="margin-bottom: 2rem;">
+                <span class="blog-category">AI/ML</span>
+                <span class="blog-author" style="color: hsl(var(--muted-foreground)); opacity: 0.8;">BY TERO VIRTAINLAHTI</span>
+                <span>JAN 15, 2026</span>
+            </div>
+            <h1 class="camera-font" style="font-size: 3.5rem; text-align: left; text-transform: none; line-height: 1.1;">
+                From Insight to Action: Accelerating Threat Hunting with AI Agents
+            </h1>
+            <p class="text-muted" style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 700px;">
+                How Sofecta Labs combines automated intelligence with agentic AI to hunt threats before they strike.
+            </p>
+        </article>
+
+        <section class="post-content">
+            <img src="../assets/blog-ai-agents.jpg" alt="AI Agents in Threat Hunting" class="post-hero-img">
+            
+            <p>
+                In cybersecurity, time is the only currency that matters. The gap between a new threat being discovered and an attacker exploiting it is shrinking rapidly. For business leaders, the challenge is no longer just knowing about a threat—it is determining, in minutes rather than days, if that threat exists within their own environment.
+            </p>
+            <p>
+                At Sofecta Labs, we have long recognized that traditional, manual threat hunting cannot keep pace with modern adversaries. That is why we have evolved our approach. We are moving beyond simple automation into the era of Agentic AI—autonomous workflows that don’t just read the news, but actively hunt for danger across your infrastructure.
+            </p>
+
+            <h3>The Foundation: Automated Intelligence Gathering</h3>
+            <p>
+                To understand where we are going, it is important to understand where the data comes from. Effective defense starts with knowing what the enemy is doing. Every single day, our systems automatically ingest cybersecurity intelligence from nearly 30 distinct sources, including vendor advisories, research papers, and underground forums. 
+            </p>
+            <p>
+                But raw data is noise, not intelligence. Our AI engine classifies, summarizes, and analyzes this influx of information. It immediately extracts references to vulnerable software and services, cross-referencing them against our clients’ specific software inventories. If a client is running a version of software that has just been compromised globally, our analysts are notified instantly.
+            </p>
+
+            <h3>The Evolution: AI Agents in the Driver’s Seat</h3>
+            <p>
+                Identifying a vulnerability is critical, but detecting active exploitation is where the battle is won or lost. Recently, we extended our capabilities by deploying AI Agentic Flows. Think of these agents not as passive chatbots, but as digital members of our security team that work alongside our human analysts. 
+            </p>
+            <p>Here is how this advanced workflow operates:</p>
+            <ol>
+                <li><strong>Intelligent Assessment:</strong> When new threat intelligence arrives, our AI analyzes the content to determine if it is "huntable." It asks: Does this threat have technical indicators we can search for?</li>
+                <li><strong>Autonomous Hunting:</strong> If the threat is actionable, the AI Agent takes charge. It doesn’t wait for a human to write a query. Instead, it cooperates directly with our security stack:
+                    <ul>
+                        <li><strong>Deep Dive with Elastic:</strong> The agent generates and executes custom ESQL (Elasticsearch Query Language) queries to scour customer environments for suspicious logs or network activity.</li>
+                        <li><strong>Endpoint & Email Analysis with Sublime:</strong> Simultaneously, the agent interfaces with Sublime Security, running custom MQL (Message Query Language) queries to detect malicious email patterns or endpoint behaviors.</li>
+                    </ul>
+                </li>
+                <li><strong>Pre-Validated Case Creation:</strong> The AI aggregates its findings into a cohesive "Threat Hunt Case." It doesn’t just dump data; it provides a summary of what it looked for, what it found, and why it matters.</li>
+                <li><strong>Human Decision Making:</strong> This is where the synergy of man and machine shines. Our seasoned analysts receive a flagged, pre-validated case. They don’t spend hours gathering data; they review the AI’s findings to decide whether to escalate the hunt or close the case.</li>
+            </ol>
+
+            <h3>The Business Impact: The "Protection Edge"</h3>
+            <p>For our clients, this technological leap translates into tangible business advantages:</p>
+            <ul>
+                <li><strong>Drastic Reduction in Dwell Time:</strong> We are no longer waiting for a scheduled review to look for new threats. The moment intel is published globally, our agents are hunting it locally.</li>
+                <li><strong>Focus on High-Value Security:</strong> By offloading the repetitive work of data querying to AI agents, our human experts focus entirely on complex decision-making and strategic defense.</li>
+                <li><strong>Scalable Vigilance:</strong> Whether it is 3:00 PM or 3:00 AM, the AI agents ensure that your organization’s defense posture is always active and reactive to the latest global trends.</li>
+            </ul>
+
+            <blockquote>
+                "At Sofecta Labs, we believe that technology alone cannot secure an organization, but technology guided by expertise is unstoppable."
+            </blockquote>
+
+            <h3>Conclusion</h3>
+            <p>
+                By integrating AI agents into our platform, we are saving tremendous amounts of time and eliminating the "noise" that plagues modern security operations. We are not just watching the threat landscape; we are actively patrolling it. This allows our clients to operate with confidence, knowing they possess a protection edge that keeps them ahead of the curve—and ahead of the attackers.
+            </p>
+        </section>
+
+        <section style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid hsl(var(--border-glass));">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 class="camera-font" style="text-transform: none;">Related Insights</h3>
+                <a href="../blog.html" class="mono-text" style="color: hsl(var(--primary)); text-decoration: none; font-size: 0.8rem;">BACK TO BLOG →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass)); margin-top: 6rem;">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="../assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="../canvas.js"></script>
+</body>
+</html>
