@@ -751,19 +751,22 @@ nav {
 
 .cyber-badge {
     font-family: 'Geist Mono', monospace;
-    font-size: 0.8rem;
-    padding: 0.6rem 1.2rem;
-    border: 1px solid hsl(var(--border-glass));
-    background: hsla(var(--surface-glass) / 0.2);
-    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(39, 201, 63, 0.3);
+    background: hsla(var(--surface-glass) / 0.1);
+    color: #27c93f;
     text-transform: uppercase;
     display: inline-block;
     transition: var(--transition);
+    letter-spacing: 0.05em;
 }
 
 .cyber-badge:hover {
-    border-color: #f5a623;
-    background: hsla(var(--surface-glass) / 0.4);
+    border-color: #27c93f;
+    background: rgba(39, 201, 63, 0.1);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(39, 201, 63, 0.2);
 }
 
 @media (max-width: 1024px) {
