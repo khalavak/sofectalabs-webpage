@@ -39,21 +39,60 @@
             <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Managed <br><span class="text-accent">Observability</span></h1>
             <p class="text-muted" style="max-width: 800px; font-size: 1.25rem; margin-bottom: 5rem;">Full-stack visibility across multi-cloud environments. Built on Elastic Enterprise Observability, we unify your metrics, logs, and traces into actionable intelligence and AI-driven performance insights.</p>
 
-            <div class="card-grid">
-                <div class="feature-card">
-                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ DATA ELKE ]</span>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Elastic Stack (KEPT) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ DATA ENGINE ]</span>
                     <h3 style="margin-bottom: 1rem;">Elastic Stack</h3>
-                    <p class="text-muted">Harness the power of 350+ integrations to ingest data from any source, providing a unified view of your infrastructure's health and security posture.</p>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Harness the power of 350+ integrations to ingest data from any source, providing a unified view of your infrastructure's health and security posture.</p>
                 </div>
-                <div class="feature-card">
-                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ UX INSIGHT ]</span>
-                    <h3 style="margin-bottom: 1rem;">RUM & Synthetics</h3>
-                    <p class="text-muted">Real User Monitoring tracks actual interactions, while synthetics proactively test critical user journeys to identify outages before customers do.</p>
+
+                <!-- Log Analytics (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ LOG ANALYTICS ]</span>
+                    <h3 style="margin-bottom: 1rem;">Log Analytics</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Petabytes of logs. Instant clarity. In seconds. Search logs with Discover, visualize with prebuilt dashboards, and run ad hoc queries with ES|QL.</p>
+                    <a href="https://www.elastic.co/observability/log-monitoring" class="cyber-badge" style="text-decoration: none; display: inline-block;">Analyze your logs →</a>
                 </div>
-                <div class="feature-card">
-                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ AI ANALYTICS ]</span>
-                    <h3 style="margin-bottom: 1rem;">Predictive AIOps</h3>
-                    <p class="text-muted">Leverage machine learning to identify anomalies in your logs and traces, predicting potential performance bottlenecks and system failures.</p>
+
+                <!-- APM (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ PERFORMANCE ]</span>
+                    <h3 style="margin-bottom: 1rem;">Application Performance</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Production-grade pure OTel. Stream native OTel without proprietary agents, and gain broad language support with intelligent sampling.</p>
+                    <a href="https://www.elastic.co/observability/application-performance-monitoring" class="cyber-badge" style="text-decoration: none; display: inline-block;">Dive into APM →</a>
+                </div>
+
+                <!-- Infrastructure (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ INFRASTRUCTURE ]</span>
+                    <h3 style="margin-bottom: 1rem;">Infrastructure Monitoring</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">From bare metal to the cloud. Gain visibility across cloud, on-prem, Kubernetes, serverless, and hosts with 400+ OOTB integrations.</p>
+                    <a href="https://www.elastic.co/observability/infrastructure-monitoring" class="cyber-badge" style="text-decoration: none; display: inline-block;">View your infrastructure →</a>
+                </div>
+
+                <!-- AIOps (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ INTELLIGENCE ]</span>
+                    <h3 style="margin-bottom: 1rem;">AIOps</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Zero-config, always-on analysis that keeps you ahead. Instantly surface anomalies, patterns, correlations, and root causes across silos.</p>
+                    <a href="https://www.elastic.co/observability/aiops" class="cyber-badge" style="text-decoration: none; display: inline-block;">Get AI-powered insights →</a>
+                </div>
+
+                <!-- LLM (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ GENAI ]</span>
+                    <h3 style="margin-bottom: 1rem;">LLM Observability</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Remove blind spots for GenAI apps. Track latency, errors, prompts, responses, usage, and costs for all major LLM services.</p>
+                    <a href="https://www.elastic.co/observability/llm-monitoring" class="cyber-badge" style="text-decoration: none; display: inline-block;">Get LLM visibility →</a>
+                </div>
+
+                <!-- DEM (NEW) -->
+                <div class="module-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ EXPERIENCE ]</span>
+                    <h3 style="margin-bottom: 1rem;">Digital Experience</h3>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">Every click. Every path. Improve user experience with real user monitoring (RUM), synthetic testing, and uptime monitoring.</p>
+                    <a href="https://www.elastic.co/observability/digital-experience-monitoring" class="cyber-badge" style="text-decoration: none; display: inline-block;">Get ahead of user issues →</a>
                 </div>
             </div>
 
