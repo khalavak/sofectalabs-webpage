@@ -118,83 +118,300 @@
 
                 <!-- Integration Grid -->
                 <div id="integrationGrid" class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                    <!-- Email Security -->
-                    <div class="module-card integration-card" data-categories="Email Security, Automation, SOAR">
+                    <!-- EMAIL SECURITY -->
+                    <div class="module-card integration-card" data-categories="Email Security, Security">
                         <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ EMAIL SECURITY ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Sublime Security</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">AI-powered programmable email security to block phishing, BEC, and malware at the source.</p>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Programmable, AI-powered cloud email security for M365 and Google Workspace. Blocks phishing, BEC, and malware via automated triage.</p>
                     </div>
 
-                    <div class="module-card integration-card" data-categories="Email Security, Endpoint Protection, Identity Management, Endpoint Management">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MICROSOFT ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">M365 Defender</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified defense suite coordinating detection and response across endpoints, identities, and email.</p>
+                    <!-- SOAR / AUTOMATION -->
+                    <div class="module-card integration-card" data-categories="SOAR, Automation">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Swimlane</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">SOAR connector for Elastic, enabling low-code security orchestration and streamlined incident response workflows.</p>
                     </div>
 
-                    <!-- Endpoint -->
-                    <div class="module-card integration-card" data-categories="Endpoint Protection, Security">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ENDPOINT ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Falcon</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time threat detection and response telemetry from the industry-leading EDR platform.</p>
-                    </div>
-
-                    <!-- Containers -->
-                    <div class="module-card integration-card" data-categories="Containers, Cloud Computing">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ORCHESTRATION ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Kubernetes</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Deep visibility into container logs and orchestration events for scalable cloud environments.</p>
-                    </div>
-
-                    <!-- SOAR -->
                     <div class="module-card integration-card" data-categories="SOAR, Automation">
                         <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Tines</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Next-gen SOAR integration for complex workflow automation and instant incident remediation.</p>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Direct integration with the Tines SOAR platform for flexible, no-code automation of repetitive security tasks.</p>
                     </div>
 
-                    <!-- Firewall -->
-                    <div class="module-card integration-card" data-categories="Firewall, Network, Cloud Security">
+                    <!-- NETWORK / ENDPOINT -->
+                    <div class="module-card integration-card" data-categories="Network, Endpoint Protection">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Packet Capture</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time packet sniffing and protocol dissection for deep observability into transaction fields and application layer traffic.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Identity Management">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ IDENTITY ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Active Directory</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">AD LDAP look-ups for User Entity analytics, enabling risk-scoring and User Behavior Analytics (UBA) scenarios.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ATTACK DETECTION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">LotL Detection</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">ML-driven 'ProblemChild' model to detect Living off the Land (LotL) activity and suspicious native tool usage.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ LATERAL MOVEMENT ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Movement Monitor</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Detects lateral movement based on file transfer activity and Windows RDP events across the enterprise estate.</p>
+                    </div>
+
+                    <!-- CONTAINERS -->
+                    <div class="module-card integration-card" data-categories="Containers">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Kubernetes</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified log and metric collection for automating deployment, scaling, and management of containerized clusters.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Containers">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Docker</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native metric and log ingestion from Docker instances using the lightweight Elastic Agent.</p>
+                    </div>
+
+                    <!-- CLOUD / AWS -->
+                    <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Security Lake</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Analyze security data at scale for a complete understanding of your cloud security posture across the organization.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Amazon S3</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Monitoring of Amazon S3 buckets through access logs, storage metrics, and request lifecycle tracking.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Cloud Computing">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Amazon EC2</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Log and metric collection for Elastic Compute Cloud (EC2) instances to ensure compute visibility.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Firewall, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS WAF</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Monitoring of Web Application Firewall (WAF) logs to protect against common web exploits and vulnerabilities.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Security Hub</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Systematic collection and parsing of security results from various AWS REST APIs.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CloudTrail</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous monitoring of AWS account activity and API usage across your entire infrastructure.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GuardDuty</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Intelligent threat detection for cloud workloads using GuardDuty findings and REST API integration.</p>
+                    </div>
+
+                    <!-- MICROSOFT -->
+                    <div class="module-card integration-card" data-categories="Endpoint Protection">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ENDPOINT ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Defender for Endpoint</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified pre- and post-breach suite coordinating response across endpoints, identities, and email.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Collaboration and Productivity Tools">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ COLLABORATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Atlassian Suite</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Log collection from Jira, Confluence, and other project management tools for software teams.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ GOOGLE ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GCP & Workspace</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native log ingestion from Google Workplace and Cloud Platform via Elastic Agent.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MICROSOFT ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">M365 & Azure</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Comprehensive activity logging for Azure Cloud and Microsoft 365 environments.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Endpoint Protection">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ SYSLOG ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">FortinetEDR</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Integration for Fortinet FortiEDR logs sent over syslog for unified security analysis.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Security, Endpoint Protection">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ EDR ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Logs</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Onboarding of CrowdStrike Falcon alerts and telemetry for incident response and UBA.</p>
+                    </div>
+
+                    <!-- FIREWALLS -->
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Google Cloud Firewall</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Dataset collection from firewall rules within your Virtual Private Cloud (VPC) networks.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall, Cloud Computing, Cloud Security">
                         <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Network Firewall</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Stateful firewall protection and traffic filtering for Amazon VPC environments.</p>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Fetches logs and metrics for VPC network protection using AWS native firewall services.</p>
                     </div>
 
-                    <!-- Cloud -->
-                    <div class="module-card integration-card" data-categories="Cloud Security, Security">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ CLOUD ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Security Hub</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Centralized view of security alerts and compliance status across AWS accounts.</p>
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Azure Firewall</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Visibility into network and application rule events for Azure cloud-native security appliances.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Cisco Meraki</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Cloud management logs for MX Appliances and Access Points via the Meraki API.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Check Point</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous monitoring of Check Point Firewall logs from appliances running Management services.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Sophos Logs</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Collection and parsing of Sophos security appliance logs using the Elastic Agent.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">SonicWall</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified log collection and analysis for SonicWall network security appliances.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Network, Security, Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Fortinet FortiGate</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native FortiGate log ingestion for advanced traffic correlation and security monitoring.</p>
+                    </div>
+
+                    <!-- THREAT INTEL -->
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">ThreatQuotient</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous ingestion of high-fidelity threat intelligence indicators from ThreatQuotient.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
                         <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Recorded Future</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time threat intelligence feeds for proactive blocking of emerging adversaries.</p>
-                    </div>
-
-                    <!-- More cards for breadth -->
-                    <div class="module-card integration-card" data-categories="Firewall">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ FIREWALL ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Fortinet FortiGate</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Next-generation firewall logs and session tracking for holistic network security.</p>
-                    </div>
-
-                    <div class="module-card integration-card" data-categories="Collaboration and Productivity Tools, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ COLLABORATION ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Google Workspace</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Activity and security audit logs from Gmail, Drive, and GCP environments.</p>
-                    </div>
-
-                    <div class="module-card integration-card" data-categories="Identity Management, Security">
-                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ IDENTITY ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Active Directory</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Advanced entity analytics and UBA to detect lateral movement and credential abuse.</p>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Integration of threat risk lists and adversaries indicators for proactive blocking.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
                         <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">MISP</h3>
-                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Open-source threat sharing integration for collaborative indicator correlation.</p>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">OpenCTI</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Management and ingestion of massive threat intelligence datasets from OpenCTI.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">MISP Feed</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Open-source threat sharing platform integration for collaborative indicator correlation.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AbuseCH</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Indicators from URL Haus, Malware Bazaar, and Threat Fox feeds for malware defense.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AlienVault OTX</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingestion of public community-sourced Pulse indicators from the AlienVault exchange.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Anomali Feed</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous syncing of threat intelligence from the Anomali platform ecosystem.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CIF v3</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingest threat indicators from a Collective Intelligence Framework instance for analysis.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Cybersixgill</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingestion of dark web insights and indicators for advanced adversary monitoring.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">EclecticIQ</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Advanced threat intelligence management and indicator ingestion from the EclecticIQ hub.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Maltiverse</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">High-fidelity threat intelligence feed collection for unified indicator defense.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Endpoint Protection, Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MONITORING ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Abuse Monitoring</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Dedicated abuse tracking and monitoring for endpoint protection and threat modeling.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Mandiant</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous collection of industry-leading threat intelligence from the Mandiant Advantage platform.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GreyNoise</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Identify internet-wide scanners and common crawlers to de-noise security alerts.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">VirusTotal</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Multi-engine scan data for file, domain, and URL reputation enrichment at scale.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">IBM X-Force</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Actionable intelligence from IBM's global security research and adversary tracking.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">ThreatConnect</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Intelligence platform designed to centralize and operationalize massive datasets.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Intel</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Adversary-driven intelligence and indicators from the CrowdStrike Falcon platform.</p>
                     </div>
                 </div>
             </div>
@@ -273,10 +490,12 @@
                 filterTags.forEach(t => t.classList.remove('active'));
                 tag.classList.add('active');
 
-                // Filter cards
+                // Filter cards with exact category matching
                 integrationCards.forEach(card => {
-                    const categories = card.getAttribute('data-categories');
-                    if (filter === 'all' || categories.includes(filter)) {
+                    const categoriesString = card.getAttribute('data-categories') || "";
+                    const categoryList = categoriesString.split(',').map(c => c.trim());
+                    
+                    if (filter === 'all' || categoryList.includes(filter)) {
                         card.classList.remove('hidden');
                     } else {
                         card.classList.add('hidden');
