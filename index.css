@@ -213,6 +213,7 @@ nav {
     border-radius: var(--radius);
     backdrop-filter: blur(12px);
     transition: var(--transition);
+    height: 100%;
 }
 
 .module-card:hover {
@@ -329,9 +330,14 @@ nav {
 /* Grid refined for cards */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
     margin-top: 4rem;
+}
+
+.card-grid a {
+    display: flex;
+    flex-direction: column;
 }
 
 /* New Section Components */
@@ -448,7 +454,7 @@ nav {
 
 @media (max-width: 992px) {
     .hero h1 { font-size: 3.5rem; }
-    .card-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -457,6 +463,8 @@ nav {
     .hero h1 { font-size: 2.75rem; }
     .hero-btns { flex-direction: column; width: 100%; }
     .btn-sofecta { width: 100%; }
+    
+    .card-grid { grid-template-columns: 1fr; }
     
     .section-padding { padding-top: 8rem; padding-bottom: 8rem; } /* Increased from 6rem */
 
