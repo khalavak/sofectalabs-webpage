@@ -746,7 +746,24 @@ nav {
     padding: 0.25rem 0.75rem;
     border: 1px solid #f5a623;
     color: #f5a623;
-    border-radius: 20px;
+    border-radius: 2px;
+}
+
+.cyber-badge {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid hsl(var(--border-glass));
+    background: hsla(var(--surface-glass) / 0.2);
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.cyber-badge:hover {
+    border-color: #f5a623;
+    background: hsla(var(--surface-glass) / 0.4);
 }
 
 @media (max-width: 1024px) {
