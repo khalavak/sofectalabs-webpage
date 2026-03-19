@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="index.css">
     <style>
         body.theme-aggressive {
-            --primary: 0 84% 60%; /* #ff5f56 red */
-            --accent: 0 84% 60%;
-            --glow-accent: 0 84% 60%;
-            --border-glass-hover: 0 84% 60% / 0.5;
+            /* Keep background dark, but allow brand colors to shine through */
+            --glow-accent: 38 92% 55%;
         }
 
+        /* Ensure the 'Response' accent remains orange/brand-consistent */
         body.theme-aggressive .text-accent {
-            color: #ff5f56 !important;
+            color: #f5a623 !important;
         }
 
+        /* Restore terminal green for metrics and badges */
         body.theme-aggressive .metric-value {
-            color: #ff5f56 !important;
+            color: #27c93f !important;
         }
 
         body.theme-aggressive .cyber-badge {
-            color: #ff5f56 !important;
-            border-color: rgba(255, 95, 86, 0.3) !important;
+            color: #27c93f !important;
+            border-color: rgba(39, 201, 63, 0.3) !important;
         }
 
         body.theme-aggressive .cyber-badge:hover {
-            border-color: #ff5f56 !important;
-            background: rgba(255, 95, 86, 0.1) !important;
-            box-shadow: 0 0 15px rgba(255, 95, 86, 0.2) !important;
+            border-color: #27c93f !important;
+            background: rgba(39, 201, 63, 0.1) !important;
+            box-shadow: 0 0 15px rgba(39, 201, 63, 0.2) !important;
             color: #fff !important;
         }
 
         body.theme-aggressive .cyber-badge.active {
-            background: #ff5f56 !important;
+            background: #27c93f !important;
             color: #000 !important;
-            border-color: #ff5f56 !important;
+            border-color: #27c93f !important;
         }
     </style>
 </head>
@@ -75,32 +75,32 @@
 
             <div class="card-grid">
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ CORE HUB ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ CORE HUB ]</span>
                     <h3 style="margin-bottom: 1rem;">ThreatCTRL</h3>
                     <p class="text-muted">Our centralized command center that orchestrates detection and response across your entire digital estate, providing a single pane of glass for absolute visibility.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ REMEDIATION ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ REMEDIATION ]</span>
                     <h3 style="margin-bottom: 1rem;">Autonomous SOAR</h3>
                     <p class="text-muted">Automated playbooks that trigger near-instant remediation, isolating infected endpoints and blocking malicious traffic without manual intervention.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ AGENTIC AI ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ AGENTIC AI ]</span>
                     <h3 style="margin-bottom: 1rem;">Proactive Hunting</h3>
                     <p class="text-muted">Our analysts leverage advanced AI agents to perform hypothesis-driven threat hunting, identifying dormant attackers and pre-exploit signals.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ COMMUNICATION ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ COMMUNICATION ]</span>
                     <h3 style="margin-bottom: 1rem;">Email Security</h3>
                     <p class="text-muted">Advanced shield against malware, ransomware, BEC, and phishing. Automates user reporting and reduces attack surface through proactive pattern matching and domain blocking.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ RISK CONTROL ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ RISK CONTROL ]</span>
                     <h3 style="margin-bottom: 1rem;">Vulnerability Management</h3>
                     <p class="text-muted">Continuous scanning and automated assessments of networks, systems, and applications. Provides exhaustive reporting for compliance and proactive risk mitigation.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="mono-text" style="color: #ff5f56; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ INVENTORY ]</span>
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ INVENTORY ]</span>
                     <h3 style="margin-bottom: 1rem;">Asset Management</h3>
                     <p class="text-muted">Comprehensive real-time visibility into all hardware, software, and network devices. Maintains a dynamic inventory to identify unauthorized assets and security gaps.</p>
                 </div>
@@ -154,296 +154,296 @@
                 <div id="integrationGrid" class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <!-- EMAIL SECURITY -->
                     <div class="module-card integration-card" data-categories="Email Security, Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ EMAIL SECURITY ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ EMAIL SECURITY ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Sublime Security</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Programmable, AI-powered cloud email security for M365 and Google Workspace. Blocks phishing, BEC, and malware via automated triage.</p>
                     </div>
 
                     <!-- SOAR / AUTOMATION -->
                     <div class="module-card integration-card" data-categories="SOAR, Automation">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Swimlane</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">SOAR connector for Elastic, enabling low-code security orchestration and streamlined incident response workflows.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="SOAR, Automation">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Tines</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Direct integration with the Tines SOAR platform for flexible, no-code automation of repetitive security tasks.</p>
                     </div>
 
                     <!-- NETWORK / ENDPOINT -->
                     <div class="module-card integration-card" data-categories="Network, Endpoint Protection">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Packet Capture</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time packet sniffing and protocol dissection for deep observability into transaction fields and application layer traffic.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Identity Management">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ IDENTITY ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ IDENTITY ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Active Directory</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">AD LDAP look-ups for User Entity analytics, enabling risk-scoring and User Behavior Analytics (UBA) scenarios.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ ATTACK DETECTION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ATTACK DETECTION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">LotL Detection</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">ML-driven 'ProblemChild' model to detect Living off the Land (LotL) activity and suspicious native tool usage.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ LATERAL MOVEMENT ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ LATERAL MOVEMENT ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Movement Monitor</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Detects lateral movement based on file transfer activity and Windows RDP events across the enterprise estate.</p>
                     </div>
 
                     <!-- CONTAINERS -->
                     <div class="module-card integration-card" data-categories="Containers">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Kubernetes</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified log and metric collection for automating deployment, scaling, and management of containerized clusters.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Containers">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ VIRTUALIZATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Docker</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native metric and log ingestion from Docker instances using the lightweight Elastic Agent.</p>
                     </div>
 
                     <!-- CLOUD / AWS -->
                     <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Security Lake</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Analyze security data at scale for a complete understanding of your cloud security posture across the organization.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Amazon S3</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Monitoring of Amazon S3 buckets through access logs, storage metrics, and request lifecycle tracking.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Cloud Computing">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Amazon EC2</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Log and metric collection for Elastic Compute Cloud (EC2) instances to ensure compute visibility.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Firewall, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS WAF</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Monitoring of Web Application Firewall (WAF) logs to protect against common web exploits and vulnerabilities.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Security Hub</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Systematic collection and parsing of security results from various AWS REST APIs.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CloudTrail</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous monitoring of AWS account activity and API usage across your entire infrastructure.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AWS CLOUD ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GuardDuty</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Intelligent threat detection for cloud workloads using GuardDuty findings and REST API integration.</p>
                     </div>
 
                     <!-- MICROSOFT -->
                     <div class="module-card integration-card" data-categories="Endpoint Protection">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ ENDPOINT ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ENDPOINT ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Defender for Endpoint</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified pre- and post-breach suite coordinating response across endpoints, identities, and email.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Collaboration and Productivity Tools">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ COLLABORATION ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ COLLABORATION ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Atlassian Suite</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Log collection from Jira, Confluence, and other project management tools for software teams.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ GOOGLE ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ GOOGLE ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GCP & Workspace</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native log ingestion from Google Workplace and Cloud Platform via Elastic Agent.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ MICROSOFT ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MICROSOFT ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">M365 & Azure</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Comprehensive activity logging for Azure Cloud and Microsoft 365 environments.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Endpoint Protection">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ SYSLOG ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ SYSLOG ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">FortinetEDR</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Integration for Fortinet FortiEDR logs sent over syslog for unified security analysis.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Security, Endpoint Protection">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ EDR ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ EDR ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Logs</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Onboarding of CrowdStrike Falcon alerts and telemetry for incident response and UBA.</p>
                     </div>
 
                     <!-- FIREWALLS -->
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Google Cloud Firewall</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Dataset collection from firewall rules within your Virtual Private Cloud (VPC) networks.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall, Cloud Computing, Cloud Security">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Network Firewall</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Fetches logs and metrics for VPC network protection using AWS native firewall services.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Azure Firewall</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Visibility into network and application rule events for Azure cloud-native security appliances.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Cisco Meraki</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Cloud management logs for MX Appliances and Access Points via the Meraki API.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Check Point</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous monitoring of Check Point Firewall logs from appliances running Management services.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Sophos Logs</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Collection and parsing of Sophos security appliance logs using the Elastic Agent.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">SonicWall</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified log collection and analysis for SonicWall network security appliances.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Network, Security, Firewall">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Fortinet FortiGate</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Native FortiGate log ingestion for advanced traffic correlation and security monitoring.</p>
                     </div>
 
                     <!-- THREAT INTEL -->
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">ThreatQuotient</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous ingestion of high-fidelity threat intelligence indicators from ThreatQuotient.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Recorded Future</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Integration of threat risk lists and adversaries indicators for proactive blocking.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">OpenCTI</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Management and ingestion of massive threat intelligence datasets from OpenCTI.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">MISP Feed</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Open-source threat sharing platform integration for collaborative indicator correlation.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AbuseCH</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Indicators from URL Haus, Malware Bazaar, and Threat Fox feeds for malware defense.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AlienVault OTX</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingestion of public community-sourced Pulse indicators from the AlienVault exchange.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Anomali Feed</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous syncing of threat intelligence from the Anomali platform ecosystem.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CIF v3</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingest threat indicators from a Collective Intelligence Framework instance for analysis.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Cybersixgill</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Ingestion of dark web insights and indicators for advanced adversary monitoring.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">EclecticIQ</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Advanced threat intelligence management and indicator ingestion from the EclecticIQ hub.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Maltiverse</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">High-fidelity threat intelligence feed collection for unified indicator defense.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Endpoint Protection, Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ MONITORING ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MONITORING ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Abuse Monitoring</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Dedicated abuse tracking and monitoring for endpoint protection and threat modeling.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Mandiant</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Continuous collection of industry-leading threat intelligence from the Mandiant Advantage platform.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">GreyNoise</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Identify internet-wide scanners and common crawlers to de-noise security alerts.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">VirusTotal</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Multi-engine scan data for file, domain, and URL reputation enrichment at scale.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">IBM X-Force</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Actionable intelligence from IBM's global security research and adversary tracking.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">ThreatConnect</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Intelligence platform designed to centralize and operationalize massive datasets.</p>
                     </div>
 
                     <div class="module-card integration-card" data-categories="Threat Intelligence">
-                        <div class="mono-text" style="color: #ff5f56; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
                         <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Intel</h3>
                         <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Adversary-driven intelligence and indicators from the CrowdStrike Falcon platform.</p>
                     </div>
@@ -519,26 +519,41 @@
             window.addEventListener('resize', resize);
             resize();
 
-            const THEME_COLOR = 'rgba(255, 95, 86,'; // Aggressive Red
+            const THEME_COLOR = 'rgba(255, 95, 86,'; // Stay Tactical Red
 
-            // 1. Amplified Sine Wave Configuration
+            // Jagged / Square Wave Functions
+            function getJaggedValue(theta) {
+                // Triangle wave (Jagged)
+                const t = (theta / (Math.PI * 2)) % 1;
+                const val = (t < 0.5 ? t * 4 - 1 : 1 - (t - 0.5) * 4);
+                // Add minor "glitch" jitter
+                return val + (Math.random() * 0.05 - 0.025);
+            }
+
+            function getSquareValue(theta) {
+                // Square wave with slight smoothing for aesthetic
+                const s = Math.sin(theta);
+                return Math.abs(s) < 0.1 ? s * 10 : Math.sign(s);
+            }
+
+            // 1. Amplified Jagged Wave Configuration
             const waves = [
-                { y: 0.3, amp: 60, freq: 0.012, speed: 1.8, color: THEME_COLOR + ' 0.35)' },
-                { y: 0.32, amp: 35, freq: 0.018, speed: -1.2, color: THEME_COLOR + ' 0.25)' },
-                { y: 0.28, amp: 25, freq: 0.035, speed: 2.5, color: THEME_COLOR + ' 0.15)' },
-                { y: 0.31, amp: 15, freq: 0.05, speed: -3.0, color: THEME_COLOR + ' 0.1)' },
-                { y: 0.29, amp: 45, freq: 0.007, speed: 1.5, color: THEME_COLOR + ' 0.2)' }
+                { y: 0.3, amp: 65, freq: 0.012, speed: 2.0, type: 'jagged', color: THEME_COLOR + ' 0.35)' },
+                { y: 0.32, amp: 40, freq: 0.018, speed: -1.5, type: 'square', color: THEME_COLOR + ' 0.25)' },
+                { y: 0.28, amp: 30, freq: 0.035, speed: 2.8, type: 'jagged', color: THEME_COLOR + ' 0.15)' },
+                { y: 0.31, amp: 20, freq: 0.05, speed: -3.5, type: 'square', color: THEME_COLOR + ' 0.1)' },
+                { y: 0.29, amp: 50, freq: 0.007, speed: 1.8, type: 'jagged', color: THEME_COLOR + ' 0.2)' }
             ];
             let waveOffset = 0;
 
             // 2. High-Density Scanning Lines
             let lines = [];
-            const maxLines = 15; // Increased from 6
+            const maxLines = 18; // Even more aggressive
 
             function createLine() {
                 const angle = Math.random() * Math.PI * 2;
                 const moveAngle = angle + (Math.PI / 2);
-                const speed = 2.5 + Math.random() * 4.5; // Faster
+                const speed = 3.0 + Math.random() * 5.0; // Faster
                 let x, y;
                 if (Math.random() > 0.5) {
                     x = Math.random() > 0.5 ? -200 : width + 200;
@@ -553,7 +568,7 @@
                     angle: angle,
                     moveAngle: moveAngle,
                     speed: speed,
-                    opacity: 0.12 + Math.random() * 0.25,
+                    opacity: 0.15 + Math.random() * 0.3,
                     length: Math.max(width, height) * 2
                 };
             }
@@ -581,17 +596,19 @@
                 return null;
             }
 
-            function drawSineWaves() {
-                waveOffset += 0.08; // Faster animation
+            function drawJaggedWaves() {
+                waveOffset += 0.08;
                 const waveYValues = [];
                 
                 waves.forEach(w => {
                     ctx.beginPath();
                     ctx.strokeStyle = w.color;
-                    ctx.lineWidth = 1.5; // Thicker lines for aggression
+                    ctx.lineWidth = w.type === 'square' ? 2.0 : 1.5;
                     const points = [];
-                    for (let x = 0; x < width; x += 3) { // Performance optimization with step
-                        const y = height * w.y + Math.sin(x * w.freq + waveOffset * w.speed) * w.amp;
+                    for (let x = 0; x < width; x += 4) {
+                        const theta = x * w.freq + waveOffset * w.speed;
+                        const val = w.type === 'jagged' ? getJaggedValue(theta) : getSquareValue(theta);
+                        const y = height * w.y + val * w.amp;
                         points.push(y);
                         if (x === 0) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
@@ -600,17 +617,17 @@
                     waveYValues.push(points);
                 });
 
-                // Intersection Highlights (Brighter dots)
+                // Intersection Highlights
                 ctx.save();
                 ctx.globalCompositeOperation = 'lighter';
-                ctx.fillStyle = 'rgba(255, 95, 86, 0.4)';
+                ctx.fillStyle = 'rgba(255, 95, 86, 0.5)';
                 for (let xIdx = 0; xIdx < waveYValues[0].length; xIdx++) {
-                    const x = xIdx * 3;
+                    const x = xIdx * 4;
                     for (let i = 0; i < waves.length; i++) {
                         for (let j = i + 1; j < waves.length; j++) {
-                            if (Math.abs(waveYValues[i][xIdx] - waveYValues[j][xIdx]) < 4) {
+                            if (Math.abs(waveYValues[i][xIdx] - waveYValues[j][xIdx]) < 5) {
                                 ctx.beginPath();
-                                ctx.arc(x, (waveYValues[i][xIdx] + waveYValues[j][xIdx]) / 2, 3.5, 0, Math.PI * 2);
+                                ctx.arc(x, (waveYValues[i][xIdx] + waveYValues[j][xIdx]) / 2, 4, 0, Math.PI * 2);
                                 ctx.fill();
                             }
                         }
@@ -632,31 +649,25 @@
                     const p = getLineEndpoints(l);
                     ctx.beginPath();
                     ctx.strokeStyle = THEME_COLOR + ` ${l.opacity})`;
-                    ctx.lineWidth = 0.75;
+                    ctx.lineWidth = 1.0;
                     ctx.moveTo(p.x1, p.y1);
                     ctx.lineTo(p.x2, p.y2);
                     ctx.stroke();
                 });
 
                 // Intersections
-                ctx.fillStyle = 'rgba(255, 95, 86, 0.8)'; // More intense red
+                ctx.fillStyle = 'rgba(255, 95, 86, 0.9)';
                 for (let i = 0; i < lines.length; i++) {
                     for (let j = i + 1; j < lines.length; j++) {
                         const point = checkIntersection(lines[i], lines[j]);
                         if (point) {
                             ctx.beginPath();
-                            ctx.arc(point.x, point.y, 3, 0, Math.PI * 2);
+                            ctx.arc(point.x, point.y, 3.5, 0, Math.PI * 2);
                             ctx.fill();
                             
                             // Glitch scan highlight
-                            ctx.strokeStyle = 'rgba(255, 95, 86, 0.3)';
-                            ctx.strokeRect(point.x - 8, point.y - 8, 16, 16);
-                            
-                            // Random flicker
-                            if (Math.random() > 0.98) {
-                                ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-                                ctx.fillRect(point.x - 100, point.y - 1, 200, 2);
-                            }
+                            ctx.strokeStyle = 'rgba(255, 95, 86, 0.4)';
+                            ctx.strokeRect(point.x - 10, point.y - 10, 20, 20);
                         }
                     }
                 }
@@ -665,13 +676,13 @@
             function animate() {
                 ctx.clearRect(0, 0, width, height);
                 
-                // Add slight "scanline" effect
-                ctx.fillStyle = 'rgba(255, 50, 50, 0.02)';
-                for(let i=0; i<height; i+=4) {
+                // Enhanced Scanline effect
+                ctx.fillStyle = 'rgba(255, 50, 50, 0.03)';
+                for(let i=0; i<height; i+=3) {
                     ctx.fillRect(0, i, width, 1);
                 }
 
-                drawSineWaves();
+                drawJaggedWaves();
                 updateAndDrawLines();
                 requestAnimationFrame(animate);
             }
