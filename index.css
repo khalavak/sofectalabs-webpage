@@ -243,7 +243,7 @@ nav {
 /* Hero Typography Refinement */
 .hero {
     position: relative;
-    min-height: 70vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,7 +277,7 @@ nav {
 .metrics-bar {
     display: flex;
     justify-content: space-around;
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
     border-top: 1px solid hsl(var(--border-glass));
     border-bottom: 1px solid hsl(var(--border-glass));
     background: hsla(var(--background) / 0.5);
@@ -453,7 +453,7 @@ nav {
 
 @media (max-width: 768px) {
     .container { padding: 0 1.5rem; }
-    .hero { min-height: 60vh; padding-top: 4rem; }
+    .hero { min-height: 50vh; padding-top: 8rem; }
     .hero h1 { font-size: 2.75rem; }
     .hero-btns { flex-direction: column; width: 100%; }
     .btn-sofecta { width: 100%; }
