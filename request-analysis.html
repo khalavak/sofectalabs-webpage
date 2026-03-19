@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Analysis — Sofecta Labs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text operational-status" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#engine">THE ENGINE</a></li>
+                    <li><a href="index.html#protocol">METHODOLOGY</a></li>
+                    <li><a href="index.html#lab">CONSULTING</a></li>
+                    <li><a href="index.html#initiate">INITIATE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li class="nav-mobile-only"><a href="index.html#initiate" class="btn-sofecta">GET STARTED</a></li>
+                </ul>
+                <a href="index.html#initiate" class="btn-sofecta header-cta">GET STARTED</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-padding" style="padding-top: 10rem;">
+            <span class="section-tag">// DETAILED ANALYSIS</span>
+            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Request <span class="text-accent">Analysis</span></h1>
+            <p class="text-muted" style="max-width: 800px; margin-bottom: 4rem;">Provide your organizational details below for a comprehensive threat landscape assessment and detection strategy roadmap. Our experts will analyze your environment and provide actionable insights within 24 hours.</p>
+
+            <div class="terminal-card" style="max-width: 900px; margin: 0 auto; margin-bottom: 6rem;">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <form id="detailedAnalysisForm">
+                    <!-- SECTION 1: IDENTITY -->
+                    <div class="terminal-line">
+                        <span class="prompt">$ initiate --identity --priority=high</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem;">
+                        <div class="terminal-line">
+                            <span class="prompt">NAME:</span>
+                            <input type="text" id="reqName" class="terminal-input" placeholder="Expert Name" required>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">EMAIL:</span>
+                            <input type="email" id="reqEmail" class="terminal-input" placeholder="contact@org.com" required>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">ORG:</span>
+                            <input type="text" id="reqOrg" class="terminal-input" placeholder="Organization" required>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">URL:</span>
+                            <input type="url" id="reqUrl" class="terminal-input" placeholder="https://..." required>
+                        </div>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">INDUSTRY:</span>
+                        <input type="text" id="reqIndustry" class="terminal-input" placeholder="e.g. FinTech, SaaS, Healthcare" required>
+                    </div>
+
+                    <!-- SECTION 2: INFRASTRUCTURE -->
+                    <div class="terminal-line" style="margin-top: 2rem; border-top: 1px dashed rgba(39, 201, 63, 0.2); padding-top: 1rem;">
+                        <span class="prompt">$ scan --infrastructure --detect-os</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                        <div class="terminal-line">
+                            <span class="prompt">WIN%:</span>
+                            <input type="number" id="osWin" class="terminal-input" placeholder="0" min="0" max="100">
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">LIN%:</span>
+                            <input type="number" id="osLin" class="terminal-input" placeholder="0" min="0" max="100">
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">MAC%:</span>
+                            <input type="number" id="osMac" class="terminal-input" placeholder="0" min="0" max="100">
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: CLOUD SERVICES -->
+                    <div class="terminal-line" style="margin-top: 1.5rem;">
+                        <span class="prompt">$ fetch --cloud-services --saas</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0.5rem 1rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="M365" style="accent-color: #27c93f;"> Microsoft 365
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="Workspace" style="accent-color: #27c93f;"> Google Workspace
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="Azure" style="accent-color: #27c93f;"> Microsoft Azure
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="AWS" style="accent-color: #27c93f;"> AWS
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="GCP" style="accent-color: #27c93f;"> Google Cloud
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #27c93f; font-family: 'Geist Mono', monospace; font-size: 0.8rem; cursor: pointer;">
+                            <input type="checkbox" name="cloud" value="OnPremAD" style="accent-color: #27c93f;"> On-Prem AD
+                        </label>
+                    </div>
+
+                    <!-- SECTION 4: NETWORK & TOOLS -->
+                    <div class="terminal-line" style="margin-top: 2rem; border-top: 1px dashed rgba(39, 201, 63, 0.2); padding-top: 1rem;">
+                        <span class="prompt">$ audit --network-stack --security-tools</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">FIREWALLS:</span>
+                        <input type="text" id="reqFirewalls" class="terminal-input" placeholder="e.g. Fortinet, Palo Alto, WAF details...">
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">IDENTITY:</span>
+                        <input type="text" id="reqIdentity" class="terminal-input" placeholder="e.g. Okta, Entra ID, Ping...">
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">EQUIPMENT:</span>
+                        <input type="text" id="reqNetwork" class="terminal-input" placeholder="Network equipment / Switch vendors...">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="terminal-line">
+                            <span class="prompt">ENDPOINTS:</span>
+                            <input type="number" id="reqEndpoints" class="terminal-input" placeholder="Estimated count">
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">SERVERS:</span>
+                            <input type="number" id="reqServers" class="terminal-input" placeholder="Estimated count">
+                        </div>
+                    </div>
+
+                    <div class="terminal-line" style="display: block; margin-top: 1rem;">
+                        <span class="prompt">SECURITY_STACK (EDR/SIEM/MDR):</span>
+                        <textarea id="reqStack" class="terminal-textarea" placeholder="List your current security tools and versions..." style="height: 80px;"></textarea>
+                    </div>
+
+                    <div class="terminal-line" style="display: block; margin-top: 1rem;">
+                        <span class="prompt">ADDITIONAL CONTEXT:</span>
+                        <textarea id="reqMessage" class="terminal-textarea" placeholder="Describe specific threats or compliance goals..." required></textarea>
+                    </div>
+
+                    <div class="terminal-line" style="display: block; margin-top: 1rem;">
+                        <span class="prompt">MDR DRIVERS / SECURITY INITIATIVES:</span>
+                        <textarea id="reqDrivers" class="terminal-textarea" placeholder="Describe the primary security concerns or strategic initiatives driving your MDR evaluation..." style="height: 80px;"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="reqSubmitBtn" class="transmit-btn">TRANSMIT COMPREHENSIVE ANALYSIS →</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass));">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="request-analysis.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">REQUEST ANALYSIS</a></li>
+                <li><a href="blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="canvas.js"></script>
+    <script>
+        document.getElementById('detailedAnalysisForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('reqSubmitBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'ANALYZING ENVIRONMENT...';
+            btn.disabled = true;
+
+            const cloudValues = Array.from(document.querySelectorAll('input[name="cloud"]:checked')).map(cb => cb.value);
+
+            const payload = {
+                source: 'detailed-page-v2',
+                timestamp: new Date().toISOString(),
+                identity: {
+                    name: document.getElementById('reqName').value,
+                    email: document.getElementById('reqEmail').value,
+                    organization: document.getElementById('reqOrg').value,
+                    industry: document.getElementById('reqIndustry').value,
+                    website: document.getElementById('reqUrl').value
+                },
+                landscape: {
+                    os: {
+                        windows: document.getElementById('osWin').value,
+                        linux: document.getElementById('osLin').value,
+                        macos: document.getElementById('osMac').value
+                    },
+                    cloud_services: cloudValues,
+                    scale: {
+                        endpoints: document.getElementById('reqEndpoints').value,
+                        servers: document.getElementById('reqServers').value
+                    }
+                },
+                infrastructure: {
+                    firewalls: document.getElementById('reqFirewalls').value,
+                    identity: document.getElementById('reqIdentity').value,
+                    network: document.getElementById('reqNetwork').value,
+                    security_stack: document.getElementById('reqStack').value
+                },
+                message: document.getElementById('reqMessage').value,
+                mdr_drivers: document.getElementById('reqDrivers').value
+            };
+
+            try {
+                await fetch('https://sofectalabs.tines.com/webhook/website-analysis-request/3e1e3e80ad25d65088da47cebb749e7e', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+                btn.innerHTML = 'ANALYSIS REQUESTED SUCCESSFULLY';
+                btn.style.color = '#27c93f';
+                btn.style.borderColor = '#27c93f';
+                document.getElementById('detailedAnalysisForm').reset();
+            } catch (error) {
+                btn.innerHTML = 'TRANSMISSION FAILED';
+                btn.style.color = '#ff5f56';
+            } finally {
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                }, 4000);
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>
