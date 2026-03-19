@@ -50,10 +50,10 @@
 
         <section class="metrics-bar">
             <div class="container">
-                <div class="status-hero-wrapper" style="justify-content: center; margin-bottom: 3rem;">
-                    <div class="mono-text operational-status" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
-                        <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                <div class="status-hero-wrapper" style="justify-content: center; margin-bottom: 3.5rem;">
+                    <div class="mono-text operational-status" style="font-size: 0.9rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.75rem;">
+                        <span id="systemStatusDot" style="width: 8px; height: 8px; background: #27c93f; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #27c93f;"></span>
+                        <a href="https://status.sofectalabs.io" id="systemStatusLink" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
                     </div>
                 </div>
                 <div style="display: flex; width: 100%; justify-content: space-around; flex-wrap: wrap; gap: 3rem;">
@@ -364,7 +364,6 @@
 
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // Optional: Change icon to X or similar, but user explicitly asked for Shield icon
         });
 
         // Close menu when clicking a link
@@ -373,6 +372,40 @@
                 navLinks.classList.remove('active');
             });
         });
+
+        // // DYNAMIC STATUS FETCHING
+        async function fetchSystemStatus() {
+            const statusLink = document.getElementById('systemStatusLink');
+            const statusDot = document.getElementById('systemStatusDot');
+            
+            try {
+                // Better Stack status pages provide a simple way to check status.
+                // Since CORS might block reading the HTML, we handle the error gracefully.
+                const response = await fetch('https://status.sofectalabs.io/');
+                if (response.ok) {
+                    const html = await response.text();
+                    if (html.includes('All services are online')) {
+                        statusLink.innerText = 'ALL SYSTEMS OPERATIONAL';
+                        statusDot.style.background = '#27c93f';
+                        statusDot.style.boxShadow = '0 0 10px #27c93f';
+                    } else if (html.includes('Partial outage') || html.includes('Degraded performance')) {
+                        statusLink.innerText = 'SYSTEMS DEGRADED';
+                        statusDot.style.background = '#ffcc00';
+                        statusDot.style.boxShadow = '0 0 10px #ffcc00';
+                    } else if (html.includes('Major outage')) {
+                        statusLink.innerText = 'CRITICAL SYSTEM OUTAGE';
+                        statusDot.style.background = '#ff5f56';
+                        statusDot.style.boxShadow = '0 0 10px #ff5f56';
+                    }
+                }
+            } catch (error) {
+                // If CORS blocks us, we stay at the default "SYSTEMS OPERATIONAL"
+                console.log('Status fetch blocked by CORS or network, using default.');
+            }
+        }
+        
+        // Run on load
+        fetchSystemStatus();
     </script>
 </body>
 </html>
