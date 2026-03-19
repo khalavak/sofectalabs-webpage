@@ -184,10 +184,18 @@ nav {
     filter: drop-shadow(0 0 8px hsla(var(--primary) / 0.5));
 }
 
-/* Operational Status - Hide on small mobile to save space */
-@media (max-width: 480px) {
-    .operational-status {
-        display: none !important;
+/* Operational Status - Relocated above Hero */
+.status-hero-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    .status-hero-wrapper {
+        justify-content: center;
+        margin-bottom: 3rem;
     }
 }
 
