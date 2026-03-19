@@ -27,6 +27,10 @@
     --border-glass: 0 0% 100% / .08;
     --border-glass-hover: 38 92% 55% / .5;
     
+    /* Header/Footer Elevation */
+    --surface-header: 230 15% 15% / 0.9;
+    --surface-footer: 230 15% 5%;
+    
     --radius: 0.25rem;
     --transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease, opacity .3s ease;
 }
@@ -113,15 +117,17 @@ h1, h2, h3, h4, .mono-text {
 
 /* Header */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: hsla(var(--background) / 0.8);
+    background-color: hsla(var(--surface-header));
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid hsl(var(--border-glass));
     padding: 1rem 0;
+    transition: var(--transition);
 }
 
 nav {
@@ -370,9 +376,7 @@ nav {
 /* --- LOGO CAROUSEL --- */
 .logo-carousel {
     overflow: hidden;
-    background: hsla(var(--background) / 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: hsl(var(--background));
     padding: 2.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -394,12 +398,12 @@ nav {
 
 .logo-carousel::before {
     left: 0;
-    background: linear-gradient(to right, hsla(var(--background) / 0.8) 0%, transparent 100%);
+    background: linear-gradient(to right, hsl(var(--background)) 0%, transparent 100%);
 }
 
 .logo-carousel::after {
     right: 0;
-    background: linear-gradient(to left, hsla(var(--background) / 0.8) 0%, transparent 100%);
+    background: linear-gradient(to left, hsl(var(--background)) 0%, transparent 100%);
 }
 
 .logo-track {
@@ -621,6 +625,14 @@ nav {
 .transmit-btn:hover {
     background: hsl(var(--primary));
     color: #000;
+}
+
+footer {
+    background-color: hsl(var(--surface-footer));
+    padding: 6rem 0;
+    border-top: 1px solid hsl(var(--border-glass));
+    position: relative;
+    z-index: 5;
 }
 
 /* Updated Footer System */
