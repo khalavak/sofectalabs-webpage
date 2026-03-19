@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Sofecta Labs</title>
+    <title>Managed Detection & Response (MDR) — Sofecta Labs</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="theme-cyber">
@@ -35,43 +35,46 @@
 
     <main class="container">
         <section class="section-padding" style="padding-top: 10rem;">
-            <span class="section-tag">// MISSION</span>
-            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Built by <span class="text-accent">Professionals</span></h1>
-            <p class="text-muted" style="max-width: 800px; font-size: 1.25rem; margin-bottom: 5rem;">We are passionate cybersecurity professionals dedicated to bringing high-fidelity managed services within reach of any organization. Our mission is to decode complexity and provide absolute visibility through science and human expertise.</p>
+            <span class="section-tag">// SOLUTIONS / MDR</span>
+            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Managed Detection <br>& <span class="text-accent">Response</span></h1>
+            <p class="text-muted" style="max-width: 800px; font-size: 1.25rem; margin-bottom: 5rem;">Proactive defense powered by ThreatCTRL. We go beyond reactive security by combining autonomous EDR, SIEM, and SOAR with human-led threat hunting to neutralize threats before they impact your business.</p>
 
-            <span class="section-tag">// LEADERSHIP</span>
-            <div class="team-grid">
-                <!-- KIM -->
-                <div class="team-card">
-                    <img src="assets/team-kim.png" alt="Kim Halavakoski" class="team-img">
-                    <h3>Kim Halavakoski</h3>
-                    <span class="team-role">MDR Operations & Consulting</span>
-                    <p class="team-bio">25+ years of experience across finance, maritime, telecommunications, and manufacturing sectors. Expert in scaling security operations and strategic consulting.</p>
+            <div class="card-grid">
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ CORE HUB ]</span>
+                    <h3 style="margin-bottom: 1rem;">ThreatCTRL</h3>
+                    <p class="text-muted">Our centralized command center that orchestrates detection and response across your entire digital estate, providing a single pane of glass for absolute visibility.</p>
                 </div>
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ REMEDIATION ]</span>
+                    <h3 style="margin-bottom: 1rem;">Autonomous SOAR</h3>
+                    <p class="text-muted">Automated playbooks that trigger near-instant remediation, isolating infected endpoints and blocking malicious traffic without manual intervention.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ AGENTIC AI ]</span>
+                    <h3 style="margin-bottom: 1rem;">Proactive Hunting</h3>
+                    <p class="text-muted">Our analysts leverage advanced AI agents to perform hypothesis-driven threat hunting, identifying dormant attackers and pre-exploit signals.</p>
+                </div>
+            </div>
 
-                <!-- SAMIPA -->
-                <div class="team-card">
-                    <img src="assets/team-samppa.png" alt="Samipetri Maijanen" class="team-img">
-                    <h3>Samipetri Maijanen</h3>
-                    <span class="team-role">SaaS Environments & IT</span>
-                    <p class="team-bio">Creator of the XDR SaaS and a premier Elasticsearch expert. With 25+ years in tech, he engineers the core infrastructure of our detection engine.</p>
+            <div style="margin-top: 8rem;">
+                <span class="section-tag">// ENGAGEMENT MODELS</span>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3 style="color: #fff;">Holistic MDR</h3>
+                        <p class="team-bio">A full-stack implementation where we deploy and manage our optimized XDR/SOAR engine as your primary security foundation.</p>
+                    </div>
+                    <div class="team-card">
+                        <h3 style="color: #fff;">Integrated Sync</h3>
+                        <p class="team-bio">We synchronize our detection capabilities with your existing tools (Microsoft Defender, Elastic, etc.), enhancing them with our proprietary intelligence.</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- JAKOB -->
-                <div class="team-card">
-                    <img src="assets/team-jakob.png" alt="Jakob Lundberg" class="team-img">
-                    <h3>Jakob Lundberg</h3>
-                    <span class="team-role">Solutions & Development</span>
-                    <p class="team-bio">Specialist in system, network, and software development. Jakob focuses on the integration and automation of advanced security tools.</p>
-                </div>
-
-                <!-- MARKO -->
-                <div class="team-card">
-                    <img src="assets/team-marko.png" alt="Marko Nenonen" class="team-img">
-                    <h3>Marko Nenonen</h3>
-                    <span class="team-role">Chief Executive Officer</span>
-                    <p class="team-bio">Solution and business professional focusing on sales, partnerships, and management. Marko brings 25+ years of IT leadership to the team.</p>
-                </div>
+            <div style="margin-top: 8rem; text-align: center; padding: 4rem; border: 1px solid hsl(var(--border-glass)); border-radius: var(--radius); background: hsla(var(--surface-glass) / 0.1);">
+                <h2 class="camera-font" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Secure your perimeter today</h2>
+                <p class="text-muted" style="margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">Ready to upgrade your detection capabilities? Request a baseline analysis of your environment.</p>
+                <a href="request-analysis.html" class="btn-sofecta">START MDR ASSESSMENT →</a>
             </div>
         </section>
     </main>
@@ -132,7 +135,6 @@
 
     <script src="canvas.js"></script>
     <script>
-        // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
         mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });

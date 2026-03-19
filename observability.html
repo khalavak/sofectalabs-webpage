@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Sofecta Labs</title>
+    <title>Managed Observability — Sofecta Labs</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="theme-cyber">
@@ -35,42 +35,47 @@
 
     <main class="container">
         <section class="section-padding" style="padding-top: 10rem;">
-            <span class="section-tag">// MISSION</span>
-            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Built by <span class="text-accent">Professionals</span></h1>
-            <p class="text-muted" style="max-width: 800px; font-size: 1.25rem; margin-bottom: 5rem;">We are passionate cybersecurity professionals dedicated to bringing high-fidelity managed services within reach of any organization. Our mission is to decode complexity and provide absolute visibility through science and human expertise.</p>
+            <span class="section-tag">// SOLUTIONS / OBSERVABILITY</span>
+            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Managed <br><span class="text-accent">Observability</span></h1>
+            <p class="text-muted" style="max-width: 800px; font-size: 1.25rem; margin-bottom: 5rem;">Full-stack visibility across multi-cloud environments. Built on Elastic Enterprise Observability, we unify your metrics, logs, and traces into actionable intelligence and AI-driven performance insights.</p>
 
-            <span class="section-tag">// LEADERSHIP</span>
-            <div class="team-grid">
-                <!-- KIM -->
-                <div class="team-card">
-                    <img src="assets/team-kim.png" alt="Kim Halavakoski" class="team-img">
-                    <h3>Kim Halavakoski</h3>
-                    <span class="team-role">MDR Operations & Consulting</span>
-                    <p class="team-bio">25+ years of experience across finance, maritime, telecommunications, and manufacturing sectors. Expert in scaling security operations and strategic consulting.</p>
+            <div class="card-grid">
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ DATA ELKE ]</span>
+                    <h3 style="margin-bottom: 1rem;">Elastic Stack</h3>
+                    <p class="text-muted">Harness the power of 350+ integrations to ingest data from any source, providing a unified view of your infrastructure's health and security posture.</p>
                 </div>
-
-                <!-- SAMIPA -->
-                <div class="team-card">
-                    <img src="assets/team-samppa.png" alt="Samipetri Maijanen" class="team-img">
-                    <h3>Samipetri Maijanen</h3>
-                    <span class="team-role">SaaS Environments & IT</span>
-                    <p class="team-bio">Creator of the XDR SaaS and a premier Elasticsearch expert. With 25+ years in tech, he engineers the core infrastructure of our detection engine.</p>
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ UX INSIGHT ]</span>
+                    <h3 style="margin-bottom: 1rem;">RUM & Synthetics</h3>
+                    <p class="text-muted">Real User Monitoring tracks actual interactions, while synthetics proactively test critical user journeys to identify outages before customers do.</p>
                 </div>
-
-                <!-- JAKOB -->
-                <div class="team-card">
-                    <img src="assets/team-jakob.png" alt="Jakob Lundberg" class="team-img">
-                    <h3>Jakob Lundberg</h3>
-                    <span class="team-role">Solutions & Development</span>
-                    <p class="team-bio">Specialist in system, network, and software development. Jakob focuses on the integration and automation of advanced security tools.</p>
+                <div class="feature-card">
+                    <span class="mono-text" style="color: #27c93f; font-size: 0.7rem; margin-bottom: 1rem; display: block;">[ AI ANALYTICS ]</span>
+                    <h3 style="margin-bottom: 1rem;">Predictive AIOps</h3>
+                    <p class="text-muted">Leverage machine learning to identify anomalies in your logs and traces, predicting potential performance bottlenecks and system failures.</p>
                 </div>
+            </div>
 
-                <!-- MARKO -->
-                <div class="team-card">
-                    <img src="assets/team-marko.png" alt="Marko Nenonen" class="team-img">
-                    <h3>Marko Nenonen</h3>
-                    <span class="team-role">Chief Executive Officer</span>
-                    <p class="team-bio">Solution and business professional focusing on sales, partnerships, and management. Marko brings 25+ years of IT leadership to the team.</p>
+            <div style="margin-top: 8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <span class="section-tag">// PERFORMANCE METRICS</span>
+                    <h2 class="camera-font" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Total Visibility</h2>
+                    <p class="text-muted" style="line-height: 1.8;">Our managed approach eliminates silos. By combining tracing and profiling with traditional logging, we provide the deep context required to troubleshoot complex microservices and distributed applications.</p>
+                </div>
+                <div class="terminal-card" style="padding: 1.5rem;">
+                    <div class="terminal-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="mono-text" style="font-size: 0.8rem; line-height: 1.6;">
+                        <span style="color: #27c93f;">$ observability --analyze-traces</span><br>
+                        [SUCCESS] Unified traces mapped: 142<br>
+                        [INFO] Anomaly detected in 'billing-svc'<br>
+                        [INFO] Latency spike correlated to DB query #882<br>
+                        <span style="color: #f5a623;">[ACTION] Auto-scaling triggered...</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,7 +137,6 @@
 
     <script src="canvas.js"></script>
     <script>
-        // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
         mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
