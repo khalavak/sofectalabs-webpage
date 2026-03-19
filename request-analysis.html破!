@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Analysis — Sofecta Labs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animations">
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/logo-horizontal.png" alt="SOFECTA LABS"></a>
+                </div>
+                <div class="mono-text operational-status" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                    <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#engine">THE ENGINE</a></li>
+                    <li><a href="index.html#protocol">METHODOLOGY</a></li>
+                    <li><a href="index.html#lab">CONSULTING</a></li>
+                    <li><a href="index.html#initiate">INITIATE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li class="nav-mobile-only"><a href="index.html#initiate" class="btn-sofecta">GET STARTED</a></li>
+                </ul>
+                <a href="index.html#initiate" class="btn-sofecta header-cta">GET STARTED</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-padding" style="padding-top: 10rem;">
+            <span class="section-tag">// DETAILED ANALYSIS</span>
+            <h1 class="camera-font" style="font-size: 4rem; text-align: left; text-transform: none; margin-bottom: 2rem;">Request <span class="text-accent">Analysis</span></h1>
+            <p class="text-muted" style="max-width: 800px; margin-bottom: 4rem;">Provide your organizational details below for a comprehensive threat landscape assessment and detection strategy roadmap. Our experts will analyze your environment and provide actionable insights within 24 hours.</p>
+
+            <div class="terminal-card" style="max-width: 800px; margin: 0 auto;">
+                <div class="terminal-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <form id="detailedAnalysisForm">
+                    <div class="terminal-line">
+                        <span class="prompt">$ initiate --full-analysis --priority=high</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">NAME:</span>
+                        <input type="text" id="reqName" class="terminal-input" placeholder="Enter name..." required>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">EMAIL:</span>
+                        <input type="email" id="reqEmail" class="terminal-input" placeholder="Enter email..." required>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">ORG:</span>
+                        <input type="text" id="reqOrg" class="terminal-input" placeholder="Organization name..." required>
+                    </div>
+                    <div class="terminal-line" style="display: block;">
+                        <span class="prompt">INFRASTRUCTURE DETAILS:</span>
+                        <textarea id="reqMessage" class="terminal-textarea" placeholder="Describe your environment, security stack, and specific concerns..." required></textarea>
+                    </div>
+                    <button type="submit" id="reqSubmitBtn" class="transmit-btn">TRANSMIT REQUEST →</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 6rem 0; border-top: 1px solid hsl(var(--border-glass));">
+        <div class="container" style="text-align: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 2.5rem;">
+                <img src="assets/logo-horizontal.png" alt="SOFECTA LABS" style="height: 50px;">
+            </div>
+            <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
+                <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
+            </ul>
+            <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
+        </div>
+    </footer>
+
+    <script src="canvas.js"></script>
+    <script>
+        document.getElementById('detailedAnalysisForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('reqSubmitBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'ANALYZING...';
+            btn.disabled = true;
+
+            const payload = {
+                source: 'detailed-page',
+                name: document.getElementById('reqName').value,
+                email: document.getElementById('reqEmail').value,
+                organization: document.getElementById('reqOrg').value,
+                message: document.getElementById('reqMessage').value
+            };
+
+            try {
+                await fetch('https://sofectalabs.tines.com/webhook/website-analysis-request/3e1e3e80ad25d65088da47cebb749e7e', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+                btn.innerHTML = 'REQUEST TRANSMITTED';
+                btn.style.color = '#27c93f';
+                btn.style.borderColor = '#27c93f';
+                document.getElementById('detailedAnalysisForm').reset();
+            } catch (error) {
+                btn.innerHTML = 'TRANSMISSION FAILED';
+                btn.style.color = '#ff5f56';
+            } finally {
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+        });
+    </script>
+</body>
+</html>

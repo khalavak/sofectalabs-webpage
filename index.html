@@ -18,18 +18,23 @@
                 <div class="logo">
                     <img src="assets/logo-horizontal.png" alt="SOFECTA LABS">
                 </div>
-                <div class="mono-text" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
+                <div class="mono-text operational-status" style="font-size: 0.65rem; color: #27c93f; letter-spacing: 0.2em; display: flex; align-items: center; gap: 0.5rem;">
                     <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
                     <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#engine">THE ENGINE</a></li>
-                    <li><a href="#protocol">PROTOCOL</a></li>
+                    <li><a href="#protocol">METHODOLOGY</a></li>
                     <li><a href="#lab">CONSULTING</a></li>
                     <li><a href="#initiate">INITIATE</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="request-analysis.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">REQUEST ANALYSIS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                    <li class="nav-mobile-only"><a href="#initiate" class="btn-sofecta">GET STARTED</a></li>
                 </ul>
-                <a href="#initiate" class="btn-sofecta">GET STARTED</a>
+                <a href="#initiate" class="btn-sofecta header-cta">GET STARTED</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </button>
             </nav>
         </div>
     </header>
@@ -132,7 +137,7 @@
         </section>
 
         <section id="protocol" class="container section-padding">
-            <span class="section-tag">// PROTOCOL</span>
+            <span class="section-tag">// METHODOLOGY</span>
             <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">How We Work</h2>
             <p class="text-muted" style="max-width: 600px; margin-bottom: 5rem;">A repeatable, transparent process. No black boxes.</p>
             
@@ -239,8 +244,8 @@
 
         <section id="initiate" class="container section-padding">
             <span class="section-tag">// INITIATE</span>
-            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">Request Analysis</h2>
-            <p class="text-muted" style="max-width: 600px; margin-bottom: 4rem;">Tell us about your environment. We'll respond with a tailored detection strategy within 24 hours.</p>
+            <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">Initiate Contact</h2>
+            <p class="text-muted" style="max-width: 600px; margin-bottom: 4rem;">Tell us about your requirements and security needs. We'll respond within 24 hours.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;">
                 <div class="text-muted" style="font-size: 0.875rem;">
@@ -259,7 +264,7 @@
                     </div>
                     <form id="requestAnalysisForm">
                         <div class="terminal-line">
-                            <span class="prompt">$ initiate --request-analysis</span>
+                            <span class="prompt">$ initiate --contact</span>
                         </div>
                         <div class="terminal-line">
                             <span class="prompt">NAME:</span>
@@ -275,11 +280,14 @@
                         </div>
                         <div class="terminal-line" style="display: block;">
                             <span class="prompt">MESSAGE:</span>
-                            <textarea id="reqMessage" class="terminal-textarea" placeholder="Describe your environment and security needs..." required></textarea>
+                            <textarea id="reqMessage" class="terminal-textarea" placeholder="Describe your requirements and security needs..." required></textarea>
                         </div>
                         <button type="submit" id="reqSubmitBtn" class="transmit-btn">TRANSMIT →</button>
                     </form>
                 </div>
+            </div>
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="request-analysis.html" class="btn-sofecta">DETAILED ANALYSIS REQUEST →</a>
             </div>
         </section>
     </main>
@@ -292,6 +300,7 @@
             <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
                 <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
                 <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="request-analysis.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">REQUEST ANALYSIS</a></li>
                 <li><a href="blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
             </ul>
             <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
@@ -344,6 +353,22 @@
                     btn.disabled = false;
                 }, 3000);
             }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Optional: Change icon to X or similar, but user explicitly asked for Shield icon
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
     </script>
 </body>

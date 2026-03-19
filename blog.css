@@ -138,11 +138,11 @@
 }
 
 blockquote {
-    border-left: 4px solid hsl(var(--accent-orange));
+    border-left: 4px solid hsl(var(--primary));
     padding: 1rem 2rem;
     margin: 3rem 0;
     font-style: italic;
     font-size: 1.25rem;
-    background: hsla(var(--accent-orange) / 0.05);
+    background: hsla(var(--primary) / 0.05);
     color: #fff;
 }

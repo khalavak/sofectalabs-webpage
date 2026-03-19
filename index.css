@@ -9,26 +9,26 @@
 }
 
 :root {
-    /* Original HSL Colors */
+    /* Updated to Lighter Orange Theme */
     --background: 230 15% 10%;
     --foreground: 220 10% 96%;
     --card: 230 12% 13%;
     --card-foreground: 220 10% 96%;
-    --primary: 142 71% 45%; /* Terminal Green */
+    --primary: 38 92% 55%; /* Lighter Orange #f5a623 */
     --primary-foreground: 0 0% 100%;
-    --accent-orange: 38 92% 55%; /* #f5a623 */
+    --accent-orange: 38 92% 55%; 
     --secondary: 230 10% 18%;
     --muted: 230 10% 20%;
     --muted-foreground: 215 10% 55%;
-    --accent: 142 71% 45%;
+    --accent: 38 92% 55%;
     --border: 220 10% 18%;
-    --glow-accent: 142 71% 45%;
+    --glow-accent: 38 92% 55%;
     --surface-glass: 0 0% 100% / .05;
     --border-glass: 0 0% 100% / .08;
-    --border-glass-hover: 37 90% 55% / .5;
+    --border-glass-hover: 38 92% 55% / .5;
     
     --radius: 0.25rem;
-    --transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    --transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease, opacity .3s ease;
 }
 
 * {
@@ -66,7 +66,8 @@ h1, h2, h3, h4, .mono-text {
 }
 
 .section-padding {
-    padding: 6rem 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .text-accent {
@@ -151,6 +152,43 @@ nav {
 
 .nav-links a:hover {
     color: hsl(var(--foreground));
+}
+
+.nav-mobile-only {
+    display: none;
+}
+
+.btn-sofecta {
+    color: hsl(var(--foreground)) !important;
+}
+
+/* Mobile Menu Toggle */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: hsl(var(--foreground));
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+.mobile-toggle svg {
+    width: 24px;
+    height: 24px;
+    stroke: hsl(var(--primary));
+    transition: var(--transition);
+}
+
+.mobile-toggle:hover svg {
+    filter: drop-shadow(0 0 8px hsla(var(--primary) / 0.5));
+}
+
+/* Operational Status - Hide on small mobile to save space */
+@media (max-width: 480px) {
+    .operational-status {
+        display: none !important;
+    }
 }
 
 /* Module Card Overlay */
@@ -396,10 +434,70 @@ nav {
     }
 }
 
+@media (max-width: 992px) {
+    .hero h1 { font-size: 3.5rem; }
+    .card-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+
 @media (max-width: 768px) {
-    .hero h1 { font-size: 3rem; }
-    .nav-links { display: none; }
+    .container { padding: 0 1.5rem; }
+    .hero { min-height: 60vh; padding-top: 4rem; }
+    .hero h1 { font-size: 2.75rem; }
+    .hero-btns { flex-direction: column; width: 100%; }
+    .btn-sofecta { width: 100%; }
+    
+    .section-padding { padding-top: 8rem; padding-bottom: 8rem; } /* Increased from 6rem */
+
+    #protocol, #initiate { padding-top: 12rem; }
+    
+    .mobile-toggle { display: block; }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: hsla(var(--background) / 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 99;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.25rem;
+    }
+
+    .nav-mobile-only {
+        display: block;
+    }
+
+    .nav-links .btn-sofecta {
+        display: flex;
+        width: auto;
+    }
+
+    .header-cta {
+        display: none; /* Hide the desktop button in nav */
+    }
+
+    .metrics-bar .container {
+        gap: 2rem;
+    }
+    
+    .metric-value { font-size: 2.25rem; }
+
     .timeline-item { flex-direction: column; gap: 1rem; }
+    .timeline-num { margin-right: 0; margin-bottom: 0.5rem; }
+    
     .logo-carousel {
         padding: 1.5rem 0;
     }
@@ -410,6 +508,16 @@ nav {
     .logo-slide img {
         max-height: 18px;
     }
+
+    .terminal-card-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2.25rem; }
+    .metric-item { width: 100%; }
 }
 
 .capability-grid {
@@ -439,6 +547,7 @@ nav {
 
 /* Terminal Form */
 .terminal-card {
+    --primary: 142 71% 45%; /* Terminal Green override */
     background: #0a0a0b;
     border: 1px solid #1a1a1c;
     border-radius: 4px;

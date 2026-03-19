@@ -22,15 +22,16 @@
                     <span style="width: 6px; height: 6px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
                     <a href="https://status.sofectalabs.io" target="_blank" style="color: inherit; text-decoration: none;">SYSTEMS OPERATIONAL</a>
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="../index.html#engine">THE ENGINE</a></li>
-                    <li><a href="../index.html#protocol">PROTOCOL</a></li>
+                    <li><a href="../index.html#protocol">METHODOLOGY</a></li>
                     <li><a href="../index.html#lab">CONSULTING</a></li>
                     <li><a href="../index.html#initiate">INITIATE</a></li>
-                    <li><a href="../blog.html" class="text-accent">BLOG</a></li>
+                    <li><a href="../request-analysis.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">REQUEST ANALYSIS</a></li>
+                <li><a href="../blog.html" class="text-accent">BLOG</a></li>
                 </ul>
                 <a href="../index.html#initiate" class="btn-sofecta">GET STARTED</a>
-            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></button></nav>
         </div>
     </header>
 
@@ -137,6 +138,7 @@
             <ul style="display: flex; justify-content: center; gap: 3rem; list-style: none; margin-bottom: 3rem;">
                 <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">PRIVACY</a></li>
                 <li><a href="#" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">TERMS</a></li>
+                <li><a href="../request-analysis.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">REQUEST ANALYSIS</a></li>
                 <li><a href="../blog.html" style="text-decoration: none; color: hsl(var(--muted-foreground)); font-size: 0.75rem; font-family: 'Geist Mono', monospace;">BLOG</a></li>
             </ul>
             <p class="mono-text" style="font-size: 0.7rem; color: hsl(var(--muted-foreground)); opacity: 0.6;">© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
@@ -144,5 +146,18 @@
     </footer>
 
     <script src="../canvas.js"></script>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
