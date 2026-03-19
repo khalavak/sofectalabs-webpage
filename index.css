@@ -781,3 +781,31 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+.filter-tag {
+    cursor: pointer;
+    transition: var(--transition);
+    background: hsla(var(--surface-glass) / 0.5);
+}
+
+.filter-tag:hover {
+    background: hsla(var(--primary) / 0.1);
+    border-color: hsl(var(--primary));
+}
+
+.filter-tag.active {
+    background: hsl(var(--primary));
+    color: #000;
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 15px hsla(var(--primary) / 0.3);
+}
+
+.integration-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.integration-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    display: none;
+}

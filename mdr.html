@@ -91,6 +91,113 @@
                 <p class="text-muted" style="margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">Ready to upgrade your detection capabilities? Request a baseline analysis of your environment.</p>
                 <a href="request-analysis.html" class="btn-sofecta">START MDR ASSESSMENT →</a>
             </div>
+
+            <div id="integrations" style="margin-top: 8rem;">
+                <span class="section-tag">// INTEGRATIONS</span>
+                <h2 class="camera-font" style="font-size: 3rem; margin-bottom: 1.5rem; text-transform: none;">Solution Stack</h2>
+                <p class="text-muted" style="max-width: 600px; margin-bottom: 3rem;">Experience seamless connectivity to our solution stack. Filter by category to explore our native integrations.</p>
+
+                <!-- Filter Bar -->
+                <div id="filterBar" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 4rem;">
+                    <button class="cyber-badge filter-tag active" data-filter="all">ALL</button>
+                    <button class="cyber-badge filter-tag" data-filter="Email Security">Email Security</button>
+                    <button class="cyber-badge filter-tag" data-filter="Identity Management">Identity Management</button>
+                    <button class="cyber-badge filter-tag" data-filter="Containers">Containers</button>
+                    <button class="cyber-badge filter-tag" data-filter="SOAR">SOAR</button>
+                    <button class="cyber-badge filter-tag" data-filter="Automation">Automation</button>
+                    <button class="cyber-badge filter-tag" data-filter="Threat Intelligence">Threat Intelligence</button>
+                    <button class="cyber-badge filter-tag" data-filter="Network">Network</button>
+                    <button class="cyber-badge filter-tag" data-filter="Security">Security</button>
+                    <button class="cyber-badge filter-tag" data-filter="Firewall">Firewall</button>
+                    <button class="cyber-badge filter-tag" data-filter="Endpoint Protection">Endpoint Protection</button>
+                    <button class="cyber-badge filter-tag" data-filter="Cloud Computing">Cloud Computing</button>
+                    <button class="cyber-badge filter-tag" data-filter="Cloud Security">Cloud Security</button>
+                    <button class="cyber-badge filter-tag" data-filter="Collaboration and Productivity Tools">Collaboration & Productivity</button>
+                    <button class="cyber-badge filter-tag" data-filter="Endpoint Management">Endpoint Management</button>
+                </div>
+
+                <!-- Integration Grid -->
+                <div id="integrationGrid" class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <!-- Email Security -->
+                    <div class="module-card integration-card" data-categories="Email Security, Automation, SOAR">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ EMAIL SECURITY ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Sublime Security</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">AI-powered programmable email security to block phishing, BEC, and malware at the source.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Email Security, Endpoint Protection, Identity Management, Endpoint Management">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ MICROSOFT ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">M365 Defender</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Unified defense suite coordinating detection and response across endpoints, identities, and email.</p>
+                    </div>
+
+                    <!-- Endpoint -->
+                    <div class="module-card integration-card" data-categories="Endpoint Protection, Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ENDPOINT ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">CrowdStrike Falcon</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time threat detection and response telemetry from the industry-leading EDR platform.</p>
+                    </div>
+
+                    <!-- Containers -->
+                    <div class="module-card integration-card" data-categories="Containers, Cloud Computing">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ ORCHESTRATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Kubernetes</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Deep visibility into container logs and orchestration events for scalable cloud environments.</p>
+                    </div>
+
+                    <!-- SOAR -->
+                    <div class="module-card integration-card" data-categories="SOAR, Automation">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ AUTOMATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Tines</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Next-gen SOAR integration for complex workflow automation and instant incident remediation.</p>
+                    </div>
+
+                    <!-- Firewall -->
+                    <div class="module-card integration-card" data-categories="Firewall, Network, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ NETWORK ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Network Firewall</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Stateful firewall protection and traffic filtering for Amazon VPC environments.</p>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="module-card integration-card" data-categories="Cloud Security, Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ CLOUD ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">AWS Security Hub</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Centralized view of security alerts and compliance status across AWS accounts.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Recorded Future</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Real-time threat intelligence feeds for proactive blocking of emerging adversaries.</p>
+                    </div>
+
+                    <!-- More cards for breadth -->
+                    <div class="module-card integration-card" data-categories="Firewall">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ FIREWALL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Fortinet FortiGate</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Next-generation firewall logs and session tracking for holistic network security.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Collaboration and Productivity Tools, Cloud Computing, Cloud Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ COLLABORATION ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Google Workspace</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Activity and security audit logs from Gmail, Drive, and GCP environments.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Identity Management, Security">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ IDENTITY ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Active Directory</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Advanced entity analytics and UBA to detect lateral movement and credential abuse.</p>
+                    </div>
+
+                    <div class="module-card integration-card" data-categories="Threat Intelligence">
+                        <div class="mono-text" style="color: #27c93f; font-size: 0.6rem; margin-bottom: 1rem;">[ INTEL ]</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">MISP</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; line-height: 1.5;">Open-source threat sharing integration for collaborative indicator correlation.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -153,6 +260,30 @@
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
         mobileToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+        // Integrations Filtering Logic
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const integrationCards = document.querySelectorAll('.integration-card');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const filter = tag.getAttribute('data-filter');
+                
+                // Update active state
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+
+                // Filter cards
+                integrationCards.forEach(card => {
+                    const categories = card.getAttribute('data-categories');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
