@@ -1,0 +1,109 @@
+{
+    "logo": {
+        "url": "/assets/logo-horizontal.png",
+        "altText": "SOFECTA LABS",
+        "styles": {
+            "self": {
+                "margin": [
+                    "mr-3"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "primaryLinks": [
+        {
+            "label": "THE ENGINE",
+            "url": "/#engine",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "METHODOLOGY",
+            "url": "/#protocol",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "CONSULTING",
+            "url": "/consulting",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "INITIATE",
+            "url": "/#initiate",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "type": "Separator"
+        },
+        {
+            "label": "BLOG",
+            "url": "/blog",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "SOLUTIONS",
+            "type": "SubNav",
+            "links": [
+                {
+                    "label": "MDR",
+                    "url": "/mdr",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Observability",
+                    "url": "/observability",
+                    "style": "secondary",
+                    "type": "Link"
+                }
+            ]
+        },
+        {
+            "label": "COMPANY",
+            "type": "SubNav",
+            "links": [
+                {
+                    "label": "About us",
+                    "url": "/about",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Careers",
+                    "url": "/careers",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Contact",
+                    "url": "/request-analysis",
+                    "style": "secondary",
+                    "type": "Link"
+                }
+            ]
+        }
+    ],
+    "secondaryLinks": [
+        {
+            "label": "GET STARTED",
+            "url": "/#initiate",
+            "style": "primary",
+            "type": "Button"
+        }
+    ],
+    "colors": "bg-transparent text-white",
+    "styles": {
+        "self": {
+            "padding": [
+                "py-0"
+            ]
+        }
+    },
+    "variant": "logo-left-primary-nav-centered",
+    "type": "Header"
+}
