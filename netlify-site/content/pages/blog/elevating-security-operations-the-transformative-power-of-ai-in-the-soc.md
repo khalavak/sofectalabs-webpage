@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-ai-soc.jpg"
   altText: "AI in the SOC"
+author:
+  type: Person
+  name: "VLADISLAV MAROCHKIN"
 ---
 
             

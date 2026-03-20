@@ -7,8 +7,11 @@ excerpt: "Why the methodical search for undetected threats is more effective whe
 slug: "unleash-superior-security-combining-threat-hunting-with-mdr"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-hunt-mdr.jpg"
+  url: "/assets/blog-unleash-superior-security-combining-threat-hunting-with-mdr.jpg"
   altText: "Unleash Superior Security"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

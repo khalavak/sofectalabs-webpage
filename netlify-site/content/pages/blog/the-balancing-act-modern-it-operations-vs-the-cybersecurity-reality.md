@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-it-ops-balance.jpg"
   altText: "IT Ops vs Security Balance"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

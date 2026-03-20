@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-disobey-2025.jpg"
   altText: "Disobey 2025 Recap"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

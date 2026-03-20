@@ -7,8 +7,11 @@ excerpt: "Diving deep into Windows telemetry, process logs, and DNS activity to 
 slug: "threat-hunting---hunting-for-konni-rat-with-elastic"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-konni-rat.png"
+  url: "/assets/blog-threat-hunting---hunting-for-konni-rat-with-elastic.png"
   altText: "Hunting for Konni RAT"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

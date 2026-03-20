@@ -7,8 +7,11 @@ excerpt: "Elevating SOCs with state-of-the-art AI analytics and enhanced cloud s
 slug: "introducing-elastic-security-8-12-2-a-new-era-of-ai-driven-insights-and-enhanced-cloud-security"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-elastic-8-12.webp"
+  url: "/assets/blog-introducing-elastic-security-8-12-2-a-new-era-of-ai-driven-insights-and-enhanced-cloud-security.webp"
   altText: "Elastic Security 8.12.2"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

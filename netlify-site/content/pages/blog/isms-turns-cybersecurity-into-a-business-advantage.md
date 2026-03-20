@@ -7,8 +7,11 @@ excerpt: "How an Information Security Management System brings clarity, consiste
 slug: "isms-turns-cybersecurity-into-a-business-advantage"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-isms-advantage.jpeg"
+  url: "/assets/blog-isms-turns-cybersecurity-into-a-business-advantage.jpeg"
   altText: "ISMS for Business Advantage"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

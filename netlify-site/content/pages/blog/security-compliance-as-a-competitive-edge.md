@@ -7,8 +7,11 @@ excerpt: "How businesses can turn compliance requirements like NIS2 and DORA int
 slug: "security-compliance-as-a-competitive-edge"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-compliance-edge.jpg"
+  url: "/assets/blog-security-compliance-as-a-competitive-edge.jpeg"
   altText: "Compliance as a Competitive Edge"
+author:
+  type: Person
+  name: "TERO VIRTAINLAHTI"
 ---
 
             

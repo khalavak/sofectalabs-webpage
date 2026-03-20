@@ -35,7 +35,7 @@ export default function PostLayout(props) {
     }, []);
 
     return (
-        <BaseLayout page={page} site={site}>
+        <BaseLayout page={page} site={{ ...site, footer: null }}>
             <div className="theme-cyber" data-sb-object-id={page.__metadata?.id}>
                 <div className="bg-animations">
                     <canvas id="networkCanvas"></canvas>
@@ -161,7 +161,7 @@ export default function PostLayout(props) {
                         </div>
                         <div style={{ paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                             <p className="mono-text" style={{ fontSize: '0.7rem', color: 'hsl(var(--muted-foreground))', opacity: '0.6' }}>© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
-                            <ul className="footer-legal">
+                            <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
                                 <li><a href="#" style={{ textDecoration: 'none', color: 'hsl(var(--muted-foreground))', fontSize: '0.7rem', fontFamily: '"Geist Mono", monospace' }}>PRIVACY</a></li>
                                 <li><a href="#" style={{ textDecoration: 'none', color: 'hsl(var(--muted-foreground))', fontSize: '0.7rem', fontFamily: '"Geist Mono", monospace' }}>TERMS</a></li>
                             </ul>

@@ -7,8 +7,11 @@ excerpt: "Amplifying human expertise through AI-powered threat intelligence auto
 slug: "how-ai-is-revolutionizing-threat-hunting-at-sofectalabs"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-how-ai-is-revolutionizing-threat-hunting-at-sofectalabs.png"
   altText: "AI Revolutionizing Threat Hunting"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

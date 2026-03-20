@@ -7,8 +7,11 @@ excerpt: "Phishing, BEC, and social engineering: Why combined security solutions
 slug: "the-rising-trend-of-email-attacks-and-the-importance-of-effective-mdr-services"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-email-attacks.jpeg"
+  url: "/assets/blog-the-rising-trend-of-email-attacks-and-the-importance-of-effective-mdr-services.jpg"
   altText: "Rising Email Attacks & MDR"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

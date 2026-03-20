@@ -7,8 +7,11 @@ excerpt: "How stealthy miners use BYOVD to disable EDR tools and carry out opera
 slug: "unveiling-ghostengine-a-new-threat-on-the-crypto-mining-landscape"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-ghostengine.png"
+  url: "/assets/blog-unveiling-ghostengine-a-new-threat-on-the-crypto-mining-landscape.png"
   altText: "Unveiling GHOSTENGINE"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

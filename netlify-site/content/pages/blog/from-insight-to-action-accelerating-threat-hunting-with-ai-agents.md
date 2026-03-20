@@ -7,8 +7,11 @@ excerpt: "How Sofecta Labs combines automated intelligence with agentic AI to hu
 slug: "from-insight-to-action-accelerating-threat-hunting-with-ai-agents"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-ai-agents.jpg"
+  url: "/assets/blog-from-insight-to-action-accelerating-threat-hunting-with-ai-agents.jpg"
   altText: "Accelerating Threat Hunting with AI Agents"
+author:
+  type: Person
+  name: "TERO VIRTAINLAHTI"
 ---
 
             

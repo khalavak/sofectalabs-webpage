@@ -7,8 +7,11 @@ excerpt: "Leveraging Tines SOAR to eliminate bottlenecks in enrichment, prioriti
 slug: "streamlining-soc-workflows-with-sofecta-labs-mdr-and-tines-automation"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-soc-automation.webp"
+  url: "/assets/blog-streamlining-soc-workflows-with-sofecta-labs-mdr-and-tines-automation.webp"
   altText: "Streamlining SOC Workflows"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

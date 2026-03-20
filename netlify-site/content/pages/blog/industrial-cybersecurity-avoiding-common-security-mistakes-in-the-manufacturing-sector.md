@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-manufacturing-mistakes.jpg"
   altText: "Manufacturing Cybersecurity"
+author:
+  type: Person
+  name: "TERO VIRTAINLAHTI"
 ---
 
             

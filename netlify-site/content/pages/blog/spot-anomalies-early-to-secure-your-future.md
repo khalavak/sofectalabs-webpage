@@ -7,8 +7,11 @@ excerpt: "Stay ahead of evolving cyber threats with Sofecta Labs’ proactive ap
 slug: "spot-anomalies-early-to-secure-your-future"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-anomaly-detection.png"
+  url: "/assets/blog-spot-anomalies-early-to-secure-your-future.png"
   altText: "Spot Anomalies Early"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

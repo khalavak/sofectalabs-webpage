@@ -7,8 +7,11 @@ excerpt: "A practical guide for manufacturing and distribution."
 slug: "balancing-cybersecurity-and-it-operations"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-balancing-cybersecurity-and-it-operations.jpg"
   altText: "Security and IT Operations"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

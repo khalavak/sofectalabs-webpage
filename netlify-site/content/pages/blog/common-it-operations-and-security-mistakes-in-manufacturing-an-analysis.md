@@ -7,8 +7,11 @@ excerpt: "Addressing legacy systems, network segmentation, and IoT risks in mode
 slug: "common-it-operations-and-security-mistakes-in-manufacturing-an-analysis"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-common-it-operations-and-security-mistakes-in-manufacturing-an-analysis.jpg"
   altText: "Manufacturing Security Analysis"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

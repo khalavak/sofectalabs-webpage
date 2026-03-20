@@ -7,8 +7,11 @@ excerpt: "Why your current email protection is no longer good enough in the curr
 slug: "why-legacy-protection-is-failing-against-modern-threats"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-legacy-protection.jpg"
+  url: "/assets/blog-why-legacy-protection-is-failing-against-modern-threats.jpg"
   altText: "Why Legacy Protection Is Failing"
+author:
+  type: Person
+  name: "TERO VIRTAINLAHTI"
 ---
 
             

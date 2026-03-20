@@ -7,8 +7,11 @@ excerpt: "Shedding light on vulnerabilities associated with hybrid deployments a
 slug: "protecting-your-microsoft-365-strategies-against-on-premises-threats"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-m365-protection.png"
+  url: "/assets/blog-protecting-your-microsoft-365-strategies-against-on-premises-threats.png"
   altText: "Protecting Microsoft 365"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

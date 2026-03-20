@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-hypothesis-hunting.jpeg"
   altText: "Hypothesis-Driven Threat Hunting"
+author:
+  type: Person
+  name: "ROBERT NORBERG"
 ---
 
             

@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/logo-horizontal.png"
   altText: "AI in SOC Operations"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

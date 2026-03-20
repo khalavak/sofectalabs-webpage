@@ -7,8 +7,11 @@ excerpt: "Technical deep dive into fileless attack chains and in-memory evasion 
 slug: "threat-hunting-detecting-amsi-bypass-and-asyncrat-deployment"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-threat-hunting-detecting-amsi-bypass-and-asyncrat-deployment.png"
   altText: "Detecting AMSI Bypass"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

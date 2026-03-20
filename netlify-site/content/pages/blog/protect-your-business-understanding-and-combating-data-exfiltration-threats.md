@@ -7,8 +7,11 @@ excerpt: "Protect your business from data exfiltration—the unauthorized theft 
 slug: "protect-your-business-understanding-and-combating-data-exfiltration-threats"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-data-exfiltration.jpg"
+  url: "/assets/blog-protect-your-business-understanding-and-combating-data-exfiltration-threats.png"
   altText: "Data Exfiltration Protection"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

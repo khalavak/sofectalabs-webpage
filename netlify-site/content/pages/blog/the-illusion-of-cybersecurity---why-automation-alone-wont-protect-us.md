@@ -7,8 +7,11 @@ excerpt: "Warning against excessive automation and a reminder of individual and 
 slug: "the-illusion-of-cybersecurity---why-automation-alone-wont-protect-us"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-the-illusion-of-cybersecurity---why-automation-alone-wont-protect-us.jpeg"
   altText: "The Illusion of Cybersecurity"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

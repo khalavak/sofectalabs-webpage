@@ -7,8 +7,11 @@ excerpt: "Managed email protection for Microsoft 365 and Google Workspace. API-d
 slug: "solving-email-security-for-modern-threats"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-solving-email-security.jpg"
+  url: "/assets/blog-solving-email-security-for-modern-threats.jpg"
   altText: "Solving Email Security For Modern Threats"
+author:
+  type: Person
+  name: "TERO VIRTAINLAHTI"
 ---
 
             

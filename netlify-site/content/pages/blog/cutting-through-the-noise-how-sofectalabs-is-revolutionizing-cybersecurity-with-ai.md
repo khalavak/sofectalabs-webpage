@@ -7,8 +7,11 @@ excerpt: "Using AI-powered triage and automation to filter the overwhelming volu
 slug: "cutting-through-the-noise-how-sofectalabs-is-revolutionizing-cybersecurity-with-ai"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-cutting-through-the-noise-how-sofectalabs-is-revolutionizing-cybersecurity-with-ai.jpg"
   altText: "Cutting Through the Noise"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

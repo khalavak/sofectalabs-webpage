@@ -7,8 +7,11 @@ excerpt: "Understanding the two pivotal landmarks guiding European organizationa
 slug: "navigating-nis2-and-dora-shaping-the-future-of-cybersecurity-across-sectors-in-europe"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-nis2-dora.jpeg"
+  url: "/assets/blog-navigating-nis2-and-dora-shaping-the-future-of-cybersecurity-across-sectors-in-europe.jpeg"
   altText: "Navigating NIS2 and DORA"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

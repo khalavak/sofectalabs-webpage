@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-ai-revolution.jpeg"
   altText: "The AI Revolution in SecOps"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

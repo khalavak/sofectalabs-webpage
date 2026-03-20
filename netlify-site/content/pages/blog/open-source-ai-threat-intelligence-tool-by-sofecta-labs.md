@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-ai-intel-tool.png"
   altText: "Open Source AI Threat Intel Tool"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

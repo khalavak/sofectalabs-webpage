@@ -7,8 +7,11 @@ excerpt: "Comparing MDE with Elastic XDR and Sofecta Labs MDR to help organizati
 slug: "maximize-your-microsoft-defender-investment-with-sofecta-labs-mdr"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-defender-vs-elastic.webp"
+  url: "/assets/blog-maximize-your-microsoft-defender-investment-with-sofecta-labs-mdr.png"
   altText: "Unleashing Microsoft Defender"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

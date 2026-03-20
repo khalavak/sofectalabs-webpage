@@ -7,8 +7,11 @@ excerpt: "Proactively searching for hidden threats that bypass traditional secur
 slug: "threat-hunting-hypothesis-driven-threat-hunting"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-threat-hunting-hypothesis-driven-threat-hunting.jpeg"
   altText: "Hypothesis-Driven Threat Hunting"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

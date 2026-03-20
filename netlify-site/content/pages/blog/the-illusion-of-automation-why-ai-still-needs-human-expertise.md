@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-automation-illusion.png"
   altText: "The Illusion of Automation"
+author:
+  type: Person
+  name: "KIM HALAVAKOSKI"
 ---
 
             

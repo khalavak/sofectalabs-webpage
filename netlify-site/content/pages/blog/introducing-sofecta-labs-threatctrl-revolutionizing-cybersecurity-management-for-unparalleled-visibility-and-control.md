@@ -7,8 +7,11 @@ excerpt: "Achieving unparalleled visibility and control over your entire cyberse
 slug: "introducing-sofecta-labs-threatctrl-revolutionizing-cybersecurity-management-for-unparalleled-visibility-and-control"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-threatctrl.jpg"
+  url: "/assets/blog-introducing-sofecta-labs-threatctrl-revolutionizing-cybersecurity-management-for-unparalleled-visibility-and-control.jpg"
   altText: "Introducing ThreatCTRL"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

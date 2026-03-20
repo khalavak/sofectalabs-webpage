@@ -7,8 +7,11 @@ excerpt: "Critical considerations for selecting the right SOC-as-a-Service partn
 slug: "creating-the-ideal-mdr-partnership-with-sofecta-labs"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-mdr-partnership.webp"
+  url: "/assets/blog-creating-the-ideal-mdr-partnership-with-sofecta-labs.webp"
   altText: "Ideal MDR Partnership"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

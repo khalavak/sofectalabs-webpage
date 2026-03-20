@@ -9,6 +9,9 @@ featuredImage:
   type: ImageBlock
   url: "/assets/blog-amsi-bypass.png"
   altText: "Bypass AMSI: Advanced Memory Threats"
+author:
+  type: Person
+  name: "ROBERT NORBERG"
 ---
 
             

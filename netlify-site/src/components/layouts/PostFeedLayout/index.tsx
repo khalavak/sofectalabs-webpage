@@ -6,7 +6,7 @@ import { getPageUrl } from '../../../utils/page-utils';
 export default function PostFeedLayout(props) {
     const { page, site } = props;
     const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
-    const { title, items = [] } = page;
+    const { title, items = [], pageIndex, numOfPages, baseUrlPath } = page;
     const [viewMode, setViewMode] = React.useState('grid');
 
     React.useEffect(() => {
@@ -33,7 +33,7 @@ export default function PostFeedLayout(props) {
     }, []);
 
     return (
-        <BaseLayout page={page} site={site}>
+        <BaseLayout page={page} site={{ ...site, footer: null }}>
             <div className="theme-cyber" data-sb-object-id={page.__metadata?.id}>
                 <div className="bg-animations">
                     <canvas id="networkCanvas"></canvas>
@@ -72,6 +72,33 @@ export default function PostFeedLayout(props) {
                                 LIST
                             </button>
                         </div>
+                        {numOfPages > 1 && (
+                            <div className="blog-pagination top-pagination">
+                                <a 
+                                    href={pageIndex > 0 ? (pageIndex === 1 ? baseUrlPath : `${baseUrlPath}/page/${pageIndex}`) : '#'} 
+                                    className={`pagination-btn ${pageIndex === 0 ? 'disabled' : ''}`}
+                                >
+                                    &lt;&lt;PREVIOUS
+                                </a>
+                                <div className="pagination-numbers">
+                                    {Array.from({ length: numOfPages }).map((_, i) => (
+                                        <a 
+                                            key={i}
+                                            href={i === 0 ? baseUrlPath : `${baseUrlPath}/page/${i + 1}`}
+                                            className={`pagination-number ${pageIndex === i ? 'active' : ''}`}
+                                        >
+                                            {i + 1}
+                                        </a>
+                                    ))}
+                                </div>
+                                <a 
+                                    href={pageIndex < numOfPages - 1 ? `${baseUrlPath}/page/${pageIndex + 2}` : '#'} 
+                                    className={`pagination-btn ${pageIndex === numOfPages - 1 ? 'disabled' : ''}`}
+                                >
+                                    NEXT&gt;&gt;
+                                </a>
+                            </div>
+                        )}
                         <div className="text-muted" style={{ fontFamily: '"Geist Mono", monospace', fontSize: '0.7rem' }}>
                             {items.length} POSTS PUBLISHED
                         </div>
@@ -93,6 +120,14 @@ export default function PostFeedLayout(props) {
                                     <div className="blog-meta">
                                         <span className="blog-category" data-sb-field-path="category">{post.category || 'SECURITY'}</span>
                                         <span className="mx-2" style={{ opacity: 0.3 }}>|</span>
+                                        {post.author && (
+                                            <>
+                                                <span className="blog-author" data-sb-field-path="author" style={{ color: 'hsl(var(--muted-foreground))', opacity: 0.8 }}>
+                                                    BY {post.author.name?.toUpperCase() || 'SOFECTA LABS'}
+                                                </span>
+                                                <span className="mx-2" style={{ opacity: 0.3 }}>|</span>
+                                            </>
+                                        )}
                                         <span data-sb-field-path="date">{dayjs(post.date).format('MMM DD, YYYY').toUpperCase()}</span>
                                     </div>
                                     <h3 data-sb-field-path="title">{post.title}</h3>
@@ -101,6 +136,34 @@ export default function PostFeedLayout(props) {
                             </article>
                         ))}
                     </section>
+
+                    {numOfPages > 1 && (
+                        <div className="blog-pagination bottom-pagination">
+                            <a 
+                                href={pageIndex > 0 ? (pageIndex === 1 ? baseUrlPath : `${baseUrlPath}/page/${pageIndex}`) : '#'} 
+                                className={`pagination-btn ${pageIndex === 0 ? 'disabled' : ''}`}
+                            >
+                                &lt;&lt;PREVIOUS
+                            </a>
+                            <div className="pagination-numbers">
+                                {Array.from({ length: numOfPages }).map((_, i) => (
+                                    <a 
+                                        key={i}
+                                        href={i === 0 ? baseUrlPath : `${baseUrlPath}/page/${i + 1}`}
+                                        className={`pagination-number ${pageIndex === i ? 'active' : ''}`}
+                                    >
+                                        {i + 1}
+                                    </a>
+                                ))}
+                            </div>
+                            <a 
+                                href={pageIndex < numOfPages - 1 ? `${baseUrlPath}/page/${pageIndex + 2}` : '#'} 
+                                className={`pagination-btn ${pageIndex === numOfPages - 1 ? 'disabled' : ''}`}
+                            >
+                                NEXT&gt;&gt;
+                            </a>
+                        </div>
+                    )}
                 </main>
 
                 <footer style={{ padding: '6rem 0', borderTop: '1px solid hsl(var(--border-glass))' }}>
@@ -145,7 +208,7 @@ export default function PostFeedLayout(props) {
                         </div>
                         <div style={{ paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                             <p className="mono-text" style={{ fontSize: '0.7rem', color: 'hsl(var(--muted-foreground))', opacity: '0.6' }}>© 2024 SOFECTA LABS. ALL SYSTEMS OPERATIONAL.</p>
-                            <ul className="footer-legal">
+                            <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
                                 <li><a href="#" style={{ textDecoration: 'none', color: 'hsl(var(--muted-foreground))', fontSize: '0.7rem', fontFamily: '"Geist Mono", monospace' }}>PRIVACY</a></li>
                                 <li><a href="#" style={{ textDecoration: 'none', color: 'hsl(var(--muted-foreground))', fontSize: '0.7rem', fontFamily: '"Geist Mono", monospace' }}>TERMS</a></li>
                             </ul>

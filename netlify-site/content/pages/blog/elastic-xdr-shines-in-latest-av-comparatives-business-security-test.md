@@ -7,8 +7,11 @@ excerpt: "Elastic Security achieved a perfect 100% malware protection rate in th
 slug: "elastic-xdr-shines-in-latest-av-comparatives-business-security-test"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-elastic-xdr-test.png"
+  url: "/assets/blog-elastic-xdr-shines-in-latest-av-comparatives-business-security-test.png"
   altText: "Elastic XDR Shines in AV-Comparatives"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

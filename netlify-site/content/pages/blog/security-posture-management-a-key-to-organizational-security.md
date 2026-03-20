@@ -7,8 +7,11 @@ excerpt: "Assessing and managing your security status continuously for proactive
 slug: "security-posture-management-a-key-to-organizational-security"
 featuredImage:
   type: ImageBlock
-  url: "/assets/blog-security-posture.jpg"
+  url: "/assets/blog-security-posture-management-a-key-to-organizational-security.jpg"
   altText: "Security Posture Management"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

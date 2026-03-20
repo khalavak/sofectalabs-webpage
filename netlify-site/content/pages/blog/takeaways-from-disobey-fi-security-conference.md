@@ -7,8 +7,11 @@ excerpt: "Highlights from the 2025 hacker-friendly gathering in Helsinki."
 slug: "takeaways-from-disobey-fi-security-conference"
 featuredImage:
   type: ImageBlock
-  url: "/assets/logo-horizontal.png"
+  url: "/assets/blog-takeaways-from-disobey-fi-security-conference.jpg"
   altText: "Disobey.fi Takeaways"
+author:
+  type: Person
+  name: "SOFECTA LABS TEAM"
 ---
 
             

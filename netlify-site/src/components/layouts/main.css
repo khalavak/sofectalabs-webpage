@@ -1,0 +1,113 @@
+
+/* Blog Pagination */
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+    font-family: "Geist Mono", monospace;
+}
+
+.pagination-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: hsl(var(--muted-foreground));
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pagination-btn:hover {
+    border-color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-orange));
+    background: rgba(255, 107, 0, 0.05);
+}
+
+.pagination-btn.active {
+    background: hsl(var(--accent-orange));
+    border-color: hsl(var(--accent-orange));
+    color: white;
+}
+
+.pagination-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.blog-pagination.top-pagination {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pagination-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: hsl(var(--muted-foreground));
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.pagination-number:hover {
+    border-color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-orange));
+}
+
+.pagination-number.active {
+    background: transparent;
+    border-color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-orange));
+    font-weight: bold;
+}
+
+.pagination-btn {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.pagination-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: hsl(var(--muted-foreground));
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.pagination-btn:hover {
+    background: rgba(255, 107, 0, 0.1);
+    border-color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-orange));
+}
+
+.pagination-btn.disabled {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-number {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.pagination-number.active {
+    border-color: hsl(var(--accent-orange));
+    color: hsl(var(--accent-orange));
+    background: rgba(255, 107, 0, 0.05);
+}
