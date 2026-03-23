@@ -1,8 +1,26 @@
 {
     "favicon": "/images/favicon.svg",
     "footer": "content/data/footer.json",
-    "titleSuffix": "Theme Demo",
+    "titleSuffix": "Sofecta Labs",
     "defaultSocialImage": "/images/main-hero.jpg",
+    "defaultMetaTags": [
+        {
+            "property": "og:site_name",
+            "content": "Sofecta Labs"
+        },
+        {
+            "property": "og:type",
+            "content": "website"
+        },
+        {
+            "property": "twitter:card",
+            "content": "summary_large_image"
+        },
+        {
+            "property": "twitter:site",
+            "content": "@sofectalabs"
+        }
+    ],
     "type": "Config",
     "header": "content/data/header.json"
 }
