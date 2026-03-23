@@ -37,6 +37,12 @@
             "type": "Link"
         },
         {
+            "label": "REQUEST ANALYSIS",
+            "url": "/request-analysis",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
             "type": "Separator"
         },
         {

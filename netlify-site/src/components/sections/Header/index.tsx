@@ -12,7 +12,21 @@ import MenuIcon from '../../svgs/menu';
 
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
+
+    useEffect(() => {
+        const handleRouteChange = () => {
+            setIsMenuOpen(false);
+            document.body.style.overflow = 'unset';
+        };
+        router.events.on('routeChangeStart', handleRouteChange);
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChange);
+        };
+    }, [router.events]);
+
     return (
         <>
             <header
@@ -32,32 +46,32 @@ export default function Header(props) {
                     <Link href="#main" className="sr-only">
                         Skip to main content
                     </Link>
-                    <HeaderVariants {...props} activePath={router.asPath} />
+                    <HeaderVariants {...props} activePath={router.asPath} setIsMenuOpen={setIsMenuOpen} />
                 </div>
             </header>
-            {(props.primaryLinks?.length > 0 || props.secondaryLinks?.length > 0) && <MobileMenu {...props} />}
+            <MobileMenuOverlay {...props} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </>
     );
 }
 
 function HeaderVariants(props) {
-    const { variant = 'logo-left-primary-nav-left', activePath, ...rest } = props;
+    const { variant = 'logo-left-primary-nav-left', activePath, setIsMenuOpen, ...rest } = props;
     switch (variant) {
         case 'logo-left-primary-nav-centered':
-            return <HeaderLogoLeftPrimaryNavCentered {...rest} activePath={activePath} />;
+            return <HeaderLogoLeftPrimaryNavCentered {...rest} activePath={activePath} setIsMenuOpen={setIsMenuOpen} />;
         case 'logo-left-primary-nav-right':
-            return <HeaderLogoLeftPrimaryRight {...rest} activePath={activePath} />;
+            return <HeaderLogoLeftPrimaryRight {...rest} activePath={activePath} setIsMenuOpen={setIsMenuOpen} />;
         case 'logo-centered-primary-nav-left':
-            return <HeaderLogoCenteredPrimaryLeft {...rest} activePath={activePath} />;
+            return <HeaderLogoCenteredPrimaryLeft {...rest} activePath={activePath} setIsMenuOpen={setIsMenuOpen} />;
         case 'logo-centered-primary-nav-centered':
-            return <HeaderLogoCenteredPrimaryCentered {...rest} activePath={activePath} />;
+            return <HeaderLogoCenteredPrimaryCentered {...rest} activePath={activePath} setIsMenuOpen={setIsMenuOpen} />;
         default:
-            return <HeaderLogoLeftPrimaryLeft {...rest} activePath={activePath} />;
+            return <HeaderLogoLeftPrimaryLeft {...rest} activePath={activePath} setIsMenuOpen={setIsMenuOpen} />;
     }
 }
 
 function HeaderLogoLeftPrimaryLeft(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
+    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations, setIsMenuOpen } = props;
     return (
         <div className="relative flex items-center">
             {(title || logo?.url) && (
@@ -75,12 +89,13 @@ function HeaderLogoLeftPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
+            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenuToggle setIsMenuOpen={setIsMenuOpen} />}
         </div>
     );
 }
 
 function HeaderLogoLeftPrimaryNavCentered(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
+    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations, setIsMenuOpen } = props;
     return (
         <div className="relative flex items-center justify-between">
             {(title || logo?.url) && (
@@ -105,12 +120,13 @@ function HeaderLogoLeftPrimaryNavCentered(props) {
                     </ul>
                 </div>
             )}
+            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenuToggle setIsMenuOpen={setIsMenuOpen} />}
         </div>
     );
 }
 
 function HeaderLogoLeftPrimaryRight(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
+    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations, setIsMenuOpen } = props;
     return (
         <div className="relative flex items-center">
             {(title || logo?.url) && (
@@ -131,12 +147,13 @@ function HeaderLogoLeftPrimaryRight(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
+            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenuToggle setIsMenuOpen={setIsMenuOpen} />}
         </div>
     );
 }
 
 function HeaderLogoCenteredPrimaryLeft(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
+    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations, setIsMenuOpen } = props;
     return (
         <div className="relative flex items-center">
             {(title || logo?.url) && (
@@ -154,12 +171,13 @@ function HeaderLogoCenteredPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
+            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenuToggle setIsMenuOpen={setIsMenuOpen} />}
         </div>
     );
 }
 
 function HeaderLogoCenteredPrimaryCentered(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
+    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations, setIsMenuOpen } = props;
     return (
         <>
             <div className="relative flex items-center">
@@ -173,6 +191,7 @@ function HeaderLogoCenteredPrimaryCentered(props) {
                         <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                     </ul>
                 )}
+                {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenuToggle setIsMenuOpen={setIsMenuOpen} />}
             </div>
             {primaryLinks.length > 0 && (
                 <ul
@@ -186,63 +205,53 @@ function HeaderLogoCenteredPrimaryCentered(props) {
     );
 }
 
-function MobileMenu(props) {
-    const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const router = useRouter();
-
-    const openMobileMenu = () => {
-        setIsMenuOpen(true);
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeMobileMenu = () => {
-        setIsMenuOpen(false);
-        document.body.style.overflow = 'unset';
-    };
-
-    useEffect(() => {
-        const handleRouteChange = () => {
-            setIsMenuOpen(false);
-            document.body.style.overflow = 'unset';
-        };
-        router.events.on('routeChangeStart', handleRouteChange);
-
-        return () => {
-            router.events.off('routeChangeStart', handleRouteChange);
-        };
-    }, [router.events]);
-
+function MobileMenuToggle({ setIsMenuOpen }) {
     return (
         <div className="ml-auto lg:hidden">
             <button
                 aria-label="Open Menu"
                 title="Open Menu"
                 className="p-2 -mr-1 focus:outline-none"
-                onClick={openMobileMenu}
+                onClick={() => {
+                    setIsMenuOpen(true);
+                    document.body.style.overflow = 'hidden';
+                }}
             >
                 <span className="sr-only">Open Menu</span>
                 <MenuIcon className="w-6 h-6 fill-current" />
             </button>
-            <div className={classNames('!bg-[#0a0a0b] text-white', 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-[9999]', isMenuOpen ? 'block' : 'hidden')}>
-                <div className="flex flex-col min-h-full">
-                    <div className="flex items-center justify-between mb-10">
-                        {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
-                        <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
-                            <CloseIcon className="w-6 h-6 fill-current" />
-                        </button>
-                    </div>
-                    {primaryLinks.length > 0 && (
-                        <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
-                            <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu activePath={router.asPath} />
-                        </ul>
-                    )}
-                    {secondaryLinks.length > 0 && (
-                        <ul {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                            <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
-                        </ul>
-                    )}
+        </div>
+    );
+}
+
+function MobileMenuOverlay(props) {
+    const { title, logo, primaryLinks = [], secondaryLinks = [], styles = {}, enableAnnotations, isMenuOpen, setIsMenuOpen } = props;
+    const router = useRouter();
+
+    const closeMobileMenu = () => {
+        setIsMenuOpen(false);
+        document.body.style.overflow = 'unset';
+    };
+
+    return (
+        <div className={classNames('!bg-[#0a0a0b] text-white', 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-[10000]', isMenuOpen ? 'block' : 'hidden')}>
+            <div className="flex flex-col min-h-full">
+                <div className="flex items-center justify-between mb-10">
+                    {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
+                    <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
+                        <CloseIcon className="w-6 h-6 fill-current" />
+                    </button>
                 </div>
+                {primaryLinks.length > 0 && (
+                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
+                        <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu activePath={router.asPath} />
+                    </ul>
+                )}
+                {secondaryLinks.length > 0 && (
+                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
+                    </ul>
+                )}
             </div>
         </div>
     );
