@@ -30,9 +30,16 @@
     const maxLines = 12;
 
     function createLine() {
-        const angle = (Math.random() * 0.4 - 0.2) + (Math.random() > 0.5 ? 0 : Math.PI); // Primarily horizontal-ish for better wave traversal
+        let angle;
+        if (Math.random() > 0.5) {
+            // Horizontal-ish line (moves up/down)
+            angle = (Math.random() * 0.4 - 0.2) + (Math.random() > 0.5 ? 0 : Math.PI);
+        } else {
+            // Vertical-ish line (moves left/right)
+            angle = (Math.PI / 2) + (Math.random() * 0.4 - 0.2) + (Math.random() > 0.5 ? 0 : Math.PI);
+        }
         const moveAngle = angle + (Math.PI / 2);
-        const speed = 1.5 + Math.random() * 3.0;
+        const speed = 1.0 + Math.random() * 2.0; // Slightly scaled down speed for visual clarity
         let x, y;
         
         // Start from off-screen
@@ -132,29 +139,37 @@
         return activeLines;
     }
 
+    function lineSegmentIntersect(x1, y1, x2, y2, x3, y3, x4, y4) {
+        const denom = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
+        if (denom === 0) return null;
+        
+        const t = ((x1 - x3) * (y3 - y4) - (y1 - y3) * (x3 - x4)) / denom;
+        const u = -((x1 - x2) * (y1 - y3) - (y1 - y2) * (x1 - x3)) / denom;
+        
+        if (t >= 0 && t <= 1 && u >= 0 && u <= 1) {
+            return {
+                x: x1 + t * (x2 - x1),
+                y: y1 + t * (y2 - y1)
+            };
+        }
+        return null;
+    }
+
     function drawIntersections(wavePoints, activeLines) {
-        // 1. Wave-Line Intersections (The Orange Highlight)
-        ctx.fillStyle = INTERSECT_COLOR;
+        // 1. Wave-Line Intersections (The Red Highlights for multi-directional lines)
+        ctx.fillStyle = LINE_COLOR + ' 0.9)'; // Red intersection point matching line color
         
         activeLines.forEach(l => {
-            // Slope-intercept form: y = mx + c
-            const dx = l.x2 - l.x1;
-            const dy = l.y2 - l.y1;
-            if (Math.abs(dx) < 0.01) return; // Skip vertical-ish lines for simplicity here
-            
-            const m = dy / dx;
-            const c = l.y1 - m * l.x1;
-
-            waves.forEach(w => {
-                // Check points along the wave
-                // To optimize, we only check x range of visible screen
-                for (let x = 0; x < width; x += 10) { 
-                    const waveY = calculateWaveY(x, w, waveOffset);
-                    const lineY = m * x + c;
+            waves.forEach((w, waveIdx) => {
+                const pts = wavePoints[waveIdx];
+                for (let i = 0; i < pts.length - 1; i++) {
+                    const p1 = pts[i];
+                    const p2 = pts[i+1];
+                    const pt = lineSegmentIntersect(l.x1, l.y1, l.x2, l.y2, p1.x, p1.y, p2.x, p2.y);
                     
-                    if (Math.abs(waveY - lineY) < 3) {
+                    if (pt) {
                         ctx.beginPath();
-                        ctx.arc(x, waveY, 1.0, 0, Math.PI * 2); // Small radius matching line width
+                        ctx.arc(pt.x, pt.y, 1.0, 0, Math.PI * 2); // Small radius matching line width
                         ctx.fill();
                     }
                 }
