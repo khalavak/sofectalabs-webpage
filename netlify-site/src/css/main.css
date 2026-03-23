@@ -369,13 +369,21 @@
     border-color: hsl(var(--border));
 }
 
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
 body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Public Sans', system-ui, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .mono-text {
@@ -392,6 +400,7 @@ h1, h2, h3, h4, .mono-text {
 /* Utilities */
 .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
 }

@@ -14,26 +14,29 @@ export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     const router = useRouter();
     return (
-        <header
-            className={classNames(
-                'sb-component',
-                'sb-component-header',
-                colors,
-                'relative',
-                'shadow-header',
-                styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined,
-                styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'py-4',
-                'z-50'
-            )}
-            {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
-        >
-            <div className="container">
-                <Link href="#main" className="sr-only">
-                    Skip to main content
-                </Link>
-                <HeaderVariants {...props} activePath={router.asPath} />
-            </div>
-        </header>
+        <>
+            <header
+                className={classNames(
+                    'sb-component',
+                    'sb-component-header',
+                    colors,
+                    'relative',
+                    'shadow-header',
+                    styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined,
+                    styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'py-4',
+                    'z-50'
+                )}
+                {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
+            >
+                <div className="container">
+                    <Link href="#main" className="sr-only">
+                        Skip to main content
+                    </Link>
+                    <HeaderVariants {...props} activePath={router.asPath} />
+                </div>
+            </header>
+            {(props.primaryLinks?.length > 0 || props.secondaryLinks?.length > 0) && <MobileMenu {...props} />}
+        </>
     );
 }
 
@@ -72,7 +75,6 @@ function HeaderLogoLeftPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
 }
@@ -103,7 +105,6 @@ function HeaderLogoLeftPrimaryNavCentered(props) {
                     </ul>
                 </div>
             )}
-            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
 }
@@ -130,7 +131,6 @@ function HeaderLogoLeftPrimaryRight(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
 }
@@ -149,12 +149,11 @@ function HeaderLogoCenteredPrimaryLeft(props) {
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} activePath={props.activePath} />
                 </ul>
             )}
-            {secondaryLinks.length > 0 && (
+            {(secondaryLinks.length > 0) && (
                 <ul className="hidden lg:flex lg:items-center ml-auto gap-x-2.5" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
 }
@@ -174,7 +173,6 @@ function HeaderLogoCenteredPrimaryCentered(props) {
                         <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                     </ul>
                 )}
-                {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
             </div>
             {primaryLinks.length > 0 && (
                 <ul
@@ -217,11 +215,16 @@ function MobileMenu(props) {
 
     return (
         <div className="ml-auto lg:hidden">
-            <button aria-label="Open Menu" title="Open Menu" className="p-2 -mr-1 focus:outline-none" onClick={openMobileMenu}>
+            <button
+                aria-label="Open Menu"
+                title="Open Menu"
+                className="p-2 -mr-1 focus:outline-none"
+                onClick={openMobileMenu}
+            >
                 <span className="sr-only">Open Menu</span>
                 <MenuIcon className="w-6 h-6 fill-current" />
             </button>
-            <div className={classNames('bg-[#0a0a0b] text-white', 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-[9999]', isMenuOpen ? 'block' : 'hidden')}>
+            <div className={classNames('!bg-[#0a0a0b] text-white', 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-[9999]', isMenuOpen ? 'block' : 'hidden')}>
                 <div className="flex flex-col min-h-full">
                     <div className="flex items-center justify-between mb-10">
                         {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
