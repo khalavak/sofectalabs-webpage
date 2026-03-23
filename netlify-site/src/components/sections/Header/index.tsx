@@ -381,14 +381,32 @@ function LinkWithSubnav(props) {
                     'sb-component-link',
                     'inline-flex',
                     'items-center',
-                    inMobileMenu ? 'w-full' : 'text-sm transition-colors duration-200',
-                    'text-white/90 hover:text-[#f97316]'
+                    'justify-center',
+                    inMobileMenu ? 'w-full text-lg text-white/60 hover:text-white' : 'text-sm text-white/90 hover:text-[#f97316] transition-colors duration-200'
                 )}
             >
                 <span {...(fieldPath && { 'data-sb-field-path': '.label' })}>{link.label}</span>
-                <ChevronDownIcon
-                    className={classNames('fill-current', 'shrink-0', 'h-4', 'w-4 transition-transform duration-200', isSubNavOpen && 'rotate-180', inMobileMenu ? 'ml-auto' : 'ml-1')}
-                />
+                <span className={classNames('shrink-0 ml-3 transition-transform duration-200', isSubNavOpen && 'rotate-90')}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-4 h-4"
+                    >
+                        {isSubNavOpen ? <line x1="5" y1="12" x2="19" y2="12"></line> : (
+                            <>
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </>
+                        )}
+                    </svg>
+                </span>
             </button>
             {(link.links ?? []).length > 0 && (
                 <ul
