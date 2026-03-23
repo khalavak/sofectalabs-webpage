@@ -255,9 +255,9 @@ function MobileMenuOverlay(props) {
                         <CloseIcon className="w-6 h-6 fill-current" />
                     </button>
                 </div>
-                <div className="flex flex-col items-center justify-center flex-grow py-12 text-center">
+                <div className="flex flex-col items-center justify-start flex-grow pt-8 text-center">
                     {primaryLinks.length > 0 && (
-                        <ul className="w-full mb-8" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
+                        <ul className="w-full mb-4" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
                             <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu activePath={router.asPath} />
                         </ul>
                     )}
@@ -313,8 +313,8 @@ function ListOfLinks(props) {
                     return (
                         <li
                             key={index}
-                            className={classNames(inMobileMenu ? 'py-4' : 'py-2', {
-                                'py-6': inMobileMenu && link.__metadata?.modelName === 'Button'
+                            className={classNames(inMobileMenu ? 'py-1.5' : 'py-2', {
+                                'py-4': inMobileMenu && link.__metadata?.modelName === 'Button'
                             })}
                         >
                             <Action
@@ -355,7 +355,7 @@ function LinkWithSubnav(props) {
 
     return (
         <li
-            className={classNames('relative', inMobileMenu ? 'border-t py-3' : 'py-2 group')}
+            className={classNames('relative', inMobileMenu ? 'py-1.5' : 'py-2 group')}
             onMouseLeave={
                 !process.env.stackbitPreview && !inMobileMenu
                     ? () => {
@@ -414,7 +414,7 @@ function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false })
                 <li key={index}>
                     <Action
                         {...link}
-                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-sm')}
+                        className={classNames(inMobileMenu ? 'w-full justify-center text-sm text-white/40 hover:text-white' : 'text-sm')}
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />
                 </li>
