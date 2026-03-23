@@ -382,7 +382,7 @@ function LinkWithSubnav(props) {
                     'inline-flex',
                     'items-center',
                     'justify-center',
-                    inMobileMenu ? 'w-full text-lg text-white/60 hover:text-white' : 'text-sm text-white/90 hover:text-[#f97316] transition-colors duration-200'
+                    inMobileMenu ? 'w-full py-3 text-lg text-white/60 hover:text-white' : 'text-sm text-white/90 hover:text-[#f97316] transition-colors duration-200'
                 )}
             >
                 <span {...(fieldPath && { 'data-sb-field-path': '.label' })}>{link.label}</span>
