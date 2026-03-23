@@ -62,5 +62,6 @@ const components = {
     About: dynamic(() => import('./layouts/AboutLayout')),
     Careers: dynamic(() => import('./layouts/CareersLayout')),
     RequestAnalysis: dynamic(() => import('./layouts/RequestAnalysisLayout')),
-    Observability: dynamic(() => import('./layouts/ObservabilityLayout'))
+    Observability: dynamic(() => import('./layouts/ObservabilityLayout')),
+    Test: dynamic(() => import('./layouts/TestLayout'))
 };
