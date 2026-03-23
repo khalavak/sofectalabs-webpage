@@ -42,13 +42,21 @@
     border-color: hsl(var(--border));
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Public Sans', system-ui, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .mono-text {
@@ -65,6 +73,7 @@ h1, h2, h3, h4, .mono-text {
 /* Utilities */
 .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -176,7 +185,7 @@ nav {
     color: hsl(var(--foreground));
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1000;
+    z-index: 1100;
 }
 
 .mobile-toggle svg {
@@ -475,17 +484,18 @@ nav {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 100%;
+        right: -100vw;
+        width: 100vw;
         height: 100vh;
-        background: hsla(var(--background) / 0.95);
+        background: hsla(var(--background) / 0.98);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 3rem;
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 99;
+        z-index: 999;
     }
     
     .nav-links.active {
