@@ -156,8 +156,8 @@
     }
 
     function drawIntersections(wavePoints, activeLines) {
-        // 1. Wave-Line Intersections (The Red Highlights for multi-directional lines)
-        ctx.fillStyle = LINE_COLOR + ' 0.9)'; // Red intersection point matching line color
+        // 1. Wave-Line Intersections (The Orange Highlights for multi-directional lines)
+        ctx.fillStyle = INTERSECT_COLOR; // Sofecta Orange
         
         activeLines.forEach(l => {
             waves.forEach((w, waveIdx) => {
