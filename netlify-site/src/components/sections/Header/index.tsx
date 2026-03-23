@@ -218,7 +218,20 @@ function MobileMenuToggle({ setIsMenuOpen }) {
                 }}
             >
                 <span className="sr-only">Open Menu</span>
-                <MenuIcon className="w-6 h-6 fill-current" />
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-6 h-6 text-[#f97316]"
+                >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
             </button>
         </div>
     );
@@ -242,16 +255,18 @@ function MobileMenuOverlay(props) {
                         <CloseIcon className="w-6 h-6 fill-current" />
                     </button>
                 </div>
-                {primaryLinks.length > 0 && (
-                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
-                        <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu activePath={router.asPath} />
-                    </ul>
-                )}
-                {secondaryLinks.length > 0 && (
-                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
-                    </ul>
-                )}
+                <div className="flex flex-col items-center justify-center flex-grow py-12 text-center">
+                    {primaryLinks.length > 0 && (
+                        <ul className="w-full mb-8" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
+                            <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu activePath={router.asPath} />
+                        </ul>
+                    )}
+                    {secondaryLinks.length > 0 && (
+                        <ul className="w-full" {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                            <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
+                        </ul>
+                    )}
+                </div>
             </div>
         </div>
     );
@@ -298,15 +313,16 @@ function ListOfLinks(props) {
                     return (
                         <li
                             key={index}
-                            className={classNames(inMobileMenu ? 'border-t' : 'py-2', {
-                                'py-4': inMobileMenu && link.__metadata.modelName === 'Button'
+                            className={classNames(inMobileMenu ? 'py-4' : 'py-2', {
+                                'py-6': inMobileMenu && link.__metadata?.modelName === 'Button'
                             })}
                         >
                             <Action
                                 {...link}
-                                className={classNames('whitespace-nowrap transition-colors duration-200', inMobileMenu ? 'w-full' : 'text-sm', {
-                                    'justify-start py-3': inMobileMenu && modelName === 'Link',
-                                    'text-white/90 hover:text-[#f97316]': modelName === 'Link',
+                                className={classNames('whitespace-nowrap transition-colors duration-200', inMobileMenu ? 'w-full text-lg' : 'text-sm', {
+                                    'justify-center py-3': inMobileMenu && modelName === 'Link',
+                                    'text-white/60 hover:text-white': inMobileMenu && modelName === 'Link',
+                                    'text-white/90 hover:text-[#f97316]': !inMobileMenu && modelName === 'Link',
                                     'btn-sofecta header-cta': modelName === 'Button'
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}

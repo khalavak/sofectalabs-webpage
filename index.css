@@ -504,7 +504,19 @@ nav {
     }
     
     .nav-links a {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        color: hsla(var(--foreground) / 0.6);
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: hsl(var(--foreground));
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border: none !important;
     }
 
     .nav-mobile-only {
