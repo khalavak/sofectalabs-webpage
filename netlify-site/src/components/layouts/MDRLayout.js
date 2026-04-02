@@ -144,8 +144,8 @@ export default function MDRLayout(props) {
                     </div>
 
                     <div style={{ marginTop: '8rem', textAlign: 'center', padding: '4rem', border: '1px solid hsl(var(--border-glass))', borderRadius: 'var(--radius)', background: 'hsl(var(--surface-glass))', backdropFilter: 'blur(12px)' }}>
-                        <h2 className="camera-font" style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Secure your perimeter today</h2>
-                        <p className="text-muted" style={{ marginBottom: '2rem', maxWidth: '600px', marginInline: 'auto' }}>Ready to upgrade your detection capabilities? Request a baseline analysis of your environment.</p>
+                        <h2 className="camera-font" style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Secure your environment today</h2>
+                        <p className="text-muted" style={{ marginBottom: '2rem', maxWidth: '600px', marginInline: 'auto' }}>Ready to upgrade your detection capabilities to the next level? Request a baseline analysis and pricing for your environment.</p>
                         <a href="/request-analysis" className="btn-sofecta">START MDR ASSESSMENT →</a>
                     </div>
 

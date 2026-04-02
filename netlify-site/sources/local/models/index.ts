@@ -49,6 +49,7 @@ import { About } from './About';
 import { Careers } from './Careers';
 import { RequestAnalysis } from './RequestAnalysis';
 import { Observability } from './Observability';
+import { LLMProxy } from './LLMProxy';
 
 export const allModels = {
     BackgroundImage,
@@ -100,5 +101,6 @@ export const allModels = {
     About,
     Careers,
     RequestAnalysis,
-    Observability
+    Observability,
+    LLMProxy
 };

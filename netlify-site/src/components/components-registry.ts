@@ -63,5 +63,6 @@ const components = {
     Careers: dynamic(() => import('./layouts/CareersLayout')),
     RequestAnalysis: dynamic(() => import('./layouts/RequestAnalysisLayout')),
     Observability: dynamic(() => import('./layouts/ObservabilityLayout')),
+    LLMProxy: dynamic(() => import('./layouts/LLMProxyLayout')),
     Test: dynamic(() => import('./layouts/TestLayout'))
 };

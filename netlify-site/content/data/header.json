@@ -66,6 +66,12 @@
                     "url": "/observability",
                     "style": "secondary",
                     "type": "Link"
+                },
+                {
+                    "label": "LLM Proxy",
+                    "url": "/llm-proxy",
+                    "style": "secondary",
+                    "type": "Link"
                 }
             ]
         },
